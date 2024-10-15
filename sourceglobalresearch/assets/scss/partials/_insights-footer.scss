@@ -1,0 +1,75 @@
+.insights-footer {
+	padding: 70px 0 120px;
+
+	@include breakpoint(large) {
+		padding: 100px 0 170px;
+	}
+
+	@include breakpoint(xlarge) {
+		padding: 130px 0 200px;
+	}
+
+	&__inner {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		@include breakpoint(medium) {
+			flex-direction: row;
+		}
+	}
+
+	&__showing {
+		@include fontSize(20px);
+		line-height: 1.2;
+		text-align: center;
+
+		@include breakpoint(large) {
+			@include fontSize(24px);
+		}
+	}
+
+	&__divider {
+		background: $colour_black;
+		height: 2px;
+		margin: 20px 0;
+		width: 30px;
+
+		@include breakpoint(medium) {
+			height: 30px;
+			margin: 0 30px;
+			width: 2px;
+		}
+
+		@include breakpoint(large) {
+			height: 35px;
+			margin: 0 50px;
+			width: 3px;
+		}
+	}
+
+	&__more {
+		&-control {
+			border-bottom: 1px solid $colour_black;
+			cursor: pointer;
+			font-family: $font_gt_sectra_medium;
+			@include fontSize(20px);
+			line-height: 1.1;
+			transition: all .2s ease-in-out;
+
+			@include breakpoint(large) {
+				border-bottom: 2px solid $colour_black;
+				@include fontSize(29px);
+			}
+
+			&:hover {
+				border-bottom: 1px solid rgba($colour_black, 0);
+
+				@include breakpoint(large) {
+					border-bottom: 2px solid rgba($colour_black, 0);
+				}
+			}
+		}
+	}
+}

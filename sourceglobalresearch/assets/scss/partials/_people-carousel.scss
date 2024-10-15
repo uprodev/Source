@@ -1,0 +1,117 @@
+.people-carousel {
+	overflow: hidden;
+	padding: 64px 0;
+
+	@include breakpoint(large) {
+		padding: 80px 0 100px;
+	}
+
+	@include breakpoint(xlarge) {
+		padding: 120px 0 100px;
+	}
+
+	&--dark {
+		background: $colour_black;
+		color: $colour_white;
+
+		.people-carousel__swiper-controls-control {
+			svg {
+				path {
+					fill: $colour_white;
+				}
+			}
+		}
+	}
+
+	&__head {
+		margin-bottom: 52px;
+
+		@include breakpoint(large) {
+			margin-bottom: 64px;
+		}
+
+		@include breakpoint(xlarge) {
+			margin-bottom: 80px;
+		}
+	}
+
+	&__title {
+		font-family: $font_gt_sectra_medium;
+		@include fontSize(28px);
+		line-height: 1.2;
+
+		@include breakpoint(medium) {
+			@include fontSize(32px);
+		}
+
+		@include breakpoint(large) {
+			@include fontSize(40px);
+		}
+	}
+
+	&__swiper-container {
+		overflow: visible;
+	}
+
+	&__swiper-wrap {
+		position: relative;
+	}
+
+	&__swiper-controls-wrap {
+		@include breakpoint(medium) {
+			bottom: 0;
+			max-width: 400px;
+			position: absolute;
+			right: 0;
+			width: 50%;
+			z-index: 1;
+		}
+
+		@include breakpoint(large) {
+			max-width: 650px;
+			width: 49.5%;
+		}
+
+		@include breakpoint(xlarge) {
+			max-width: 100%;
+		}
+	}
+
+	&__swiper-controls {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 37px;
+		width: 73px;
+
+		@include breakpoint(medium) {
+			margin-top: 0;
+		}
+
+		@include breakpoint(large) {
+			width: 105px;
+		}
+
+		&-control {
+			cursor: pointer;
+			width: 15px;
+
+			@include breakpoint(large) {
+				width: 20px;
+			}
+
+			svg {
+				display: flex;
+				width: 100%;
+
+				path {
+					fill: $colour_black;
+				}
+			}
+
+			&.swiper-button-disabled {
+				opacity: .3;
+			}
+		}
+	}
+
+}

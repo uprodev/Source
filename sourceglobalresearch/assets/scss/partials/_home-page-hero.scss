@@ -1,0 +1,185 @@
+.home-page-hero + .latest-posts {
+	padding-top: 64px;
+
+	.latest-posts__title {
+		@include breakpoint(small only) {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+.home-page-hero {
+	background: $colour_black;
+	color: $colour_white;
+	overflow: hidden;
+
+	@include breakpoint(medium) {
+		padding-top: 0;
+	}
+
+	&--border-bottom {
+		border-bottom: 1px solid $colour_offwhite;
+	}
+
+	&--red {
+		.home-page-hero__heading {
+			strong {
+				color: $colour_red;
+			}
+		}
+	}
+
+	&--yellow {
+		.home-page-hero__heading {
+			strong {
+				color: $colour_yellow;
+			}
+		}
+	}
+
+	&--green {
+		.home-page-hero__heading {
+			strong {
+				color: $colour_green;
+			}
+		}
+	}
+
+	&--blue {
+		.home-page-hero__heading {
+			strong {
+				color: $colour_blue;
+			}
+		}
+	}
+
+	&--purple {
+		.home-page-hero__heading {
+			strong {
+				color: $colour_purple;
+			}
+		}
+	}
+
+	&__image-cell {
+		@include breakpoint(large) {
+			display: flex;
+		}
+	}
+
+	&__image-wrap {
+		align-items: center;
+		display: flex;
+		height: 100%;
+		margin-left: -24px;
+		margin-right: -24px;
+		max-height: 420px;
+		overflow: hidden;
+
+		@include breakpoint(medium) {
+			max-height: 480px;
+		}
+
+		@include breakpoint(large) {
+			align-self: center;
+			margin-left: 0;
+			margin-right: 0;
+			max-height: initial;
+			width: 100%;
+		}
+
+		@include breakpoint(xlarge) {
+			max-height: 660px;
+			overflow: visible;
+		}
+
+		@include breakpoint(xxlarge) {
+			max-height: 730px;
+		}
+	}
+
+	&__image {
+		@include aspectBox(844, 744);
+		position: relative;
+		height: 100%;
+		margin: 0 auto;
+		max-width: 700px;
+		width: 100%;
+
+		@include breakpoint(large) {
+			@include aspectBox(864, 747);
+			max-width: 100%;
+			min-height: 100%;
+		}
+
+		@include breakpoint(xlarge) {
+			min-width: 115%;
+		}
+
+		@include breakpoint(xxlarge) {
+			min-width: 130%;
+		}
+
+		.img-background {
+			object-position: center 0px;
+
+			@include breakpoint(large) {
+				object-position: 0;
+			}
+		}
+	}
+
+	&__content-wrap {
+		align-items: center;
+		display: flex;
+		height: 100%;
+	}
+
+	&__content {
+		max-width: 440px;
+		padding: 37px 0 64px 0;
+
+		@include breakpoint(medium) {
+			margin: 0 auto;
+			max-width: 600px;
+		}
+
+		@include breakpoint(large) {
+			max-width: 650px;
+			padding: 60px 0;
+		}
+
+		@include breakpoint(xlarge) {
+			padding: 100px 0 70px 0;
+			max-width: 750px;
+		}
+	}
+
+	&__heading {
+		font-family: $font_gt_sectra_medium;
+		@include fontSize(40px);
+		line-height: 1.38;
+		font-weight: normal;
+		margin-bottom: 47px;
+
+		@include breakpoint(medium) {
+			@include fontSize(60px);
+		}
+
+		@include breakpoint(large) {
+			@include fontSize(80px);
+			line-height: 1.1;
+			margin-bottom: 68px;
+			padding-right: 10px;
+		}
+
+		@include breakpoint(xxlarge) {
+			@include fontSize(98px);
+		}
+
+		strong {
+			color: $colour_purple;
+			font-weight: normal;
+		}
+	}
+}

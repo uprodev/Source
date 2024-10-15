@@ -1,0 +1,25 @@
+.insight-related-posts {
+	padding: 64px 0;
+
+	@include breakpoint(large) {
+		padding: 80px 0;
+	}
+
+	&__heading {
+		font-family: $font_gt_sectra_medium;
+		@include fontSize(32px);
+		line-height: 1.55;
+		margin-bottom: 40px;
+
+		@include breakpoint(large) {
+			@include fontSize(40px);
+			line-height: 1.35;
+			margin-bottom: 65px;
+		}
+
+		@include breakpoint(xlarge) {
+			// @include fontSize(50px);
+			// margin-bottom: 75px;
+		}
+	}
+}

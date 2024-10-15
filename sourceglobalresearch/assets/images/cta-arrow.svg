@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 14.728">
+  <path id="arrow" class="arrow" d="M177.707 8.071a.999.999 0 0 0 0-1.414L171.343.293a.999.999 0 1 0-1.414 1.414l5.657 5.657-5.657 5.657a.999.999 0 1 0 1.414 1.414l6.364-6.364Z" fill="#fff"/><path id="line" class="line" d="M0 6.364h177v2H0z" fill="#fill"/>
+</svg>

@@ -1,0 +1,12 @@
+.button {
+	// border: 1px solid;
+	cursor: pointer;
+	display: inline-block;
+	// font-family: $font_commuters_sans;
+	@include fontSize(16px);
+	// @include letterSpacing(150);
+	line-height: 1;
+	// padding: 18px 40px;
+	text-transform: uppercase;
+	transition: all .2s ease-in-out;
+}

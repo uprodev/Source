@@ -1,0 +1,189 @@
+.person-about {
+	padding: 64px 0;
+
+	@include breakpoint(large) {
+		padding: 80px 0;
+	}
+
+	&--purple {
+		.person-about__expertise {
+			border-color: $colour_purple;
+		}
+	}
+
+	&--red {
+		.person-about__expertise {
+			border-color: $colour_red;
+		}
+	}
+
+	&--green {
+		.person-about__expertise {
+			border-color: $colour_green;
+		}
+	}
+
+	&--yellow {
+		.person-about__expertise {
+			border-color: $colour_yellow;
+		}
+	}
+
+	&--blue {
+		.person-about__expertise {
+			border-color: $colour_blue;
+		}
+	}
+
+	&__about {
+		&-title {
+			font-family: $font_gt_sectra_medium;
+			@include fontSize(32px);
+			line-height: 1.25;
+			margin-bottom: 32px;
+
+			@include breakpoint(large) {
+				@include fontSize(40px);
+				margin-bottom: 37px;
+			}
+		}
+
+		&-content {
+			@include fontSize(20px);
+			line-height: 1.58;
+			max-width: 700px;
+
+			@include breakpoint(large) {
+				@include fontSize(24px);
+				max-width: 100%;
+			}
+
+			* + * {
+				margin-top: 10px;
+
+				@include breakpoint(large) {
+					margin-top: 30px;
+				}
+			}
+		}
+	}
+
+	&__expertise {
+		margin-top: 48px;
+
+		@include breakpoint(large) {
+			margin-top: 85px;
+		}
+
+		&--border {
+			@include breakpoint(large) {
+				border-right: 10px solid;
+			}
+		}
+
+		&-title {
+			font-family: $font_gt_sectra_medium;
+			@include fontSize(24px);
+			line-height: 1.25;
+			margin-bottom: 28px;
+
+			@include breakpoint(large) {
+				@include fontSize(28px);
+			}
+
+			@include breakpoint(xlarge) {
+				// @include fontSize(32px);
+			}
+		}
+
+		&-list {
+			&-item {
+				@include fontSize(20px);
+				line-height: 1.1;
+
+				@include breakpoint(large) {
+					@include fontSize(22px);
+					line-height: 1.6;
+				}
+
+				@include breakpoint(xlarge) {
+					// @include fontSize(24px);
+				}
+			}
+
+			&-item + &-item {
+				margin-top: 20px;
+
+				@include breakpoint(large) {
+					margin-top: 0;
+				}
+			}
+		}
+
+		&-list + &-links {
+			margin-top: 32px;
+
+			@include breakpoint(large) {
+				margin-top: 42px;
+			}
+		}
+
+		&-links {
+			align-items: center;
+			display: flex;
+
+			&-item {
+				margin-right: 18px;
+				width: 23px;
+
+				@include breakpoint(large) {
+					margin-right: 23px;
+					width: 25px;
+				}
+
+				@include breakpoint(xlarge) {
+					margin-right: 27px;
+					width: 29px;
+				}
+
+				&--facebook {
+				}
+
+				&--linkedin {
+				}
+
+				&--twitter {
+					margin-right: 16px;
+
+					@include breakpoint(large) {
+						margin-right: 21px;
+					}
+
+					@include breakpoint(xlarge) {
+						margin-right: 25px;
+					}
+				}
+
+				&--email {
+					width: 26px;
+
+					@include breakpoint(large) {
+						width: 28px;
+					}
+
+					@include breakpoint(xlarge) {
+						width: 32px;
+					}
+				}
+
+				&-link {
+					&-icon {
+						svg {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}

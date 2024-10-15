@@ -1,0 +1,81 @@
+.text-with-logo-carousel {
+	overflow: hidden;
+	padding: 64px 0;
+
+	@include breakpoint(large) {
+		padding: 160px 0 145px;
+	}
+
+	@include breakpoint(xlarge) {
+		// padding: 180px 0 150px;
+	}
+
+	&__content {
+		&-title {
+			font-family: $font_gt_sectra_medium;
+			@include fontSize(32px);
+			line-height: 1.25;
+
+			@include breakpoint(large) {
+				@include fontSize(40px);
+			}
+		}
+
+		&-title + &-description {
+			margin-top: 24px;
+
+			@include breakpoint(large) {
+				margin-top: 48px;
+			}
+		}
+
+		&-description {
+			@include fontSize(18px);
+			line-height: 1.6;
+			max-width: 600px;
+
+			@include breakpoint(large) {
+				@include fontSize(30px);
+				max-width: 893px;
+			}
+		}
+	}
+
+	&__logos {
+		margin-top: 42px;
+
+		@include breakpoint(large) {
+			margin-top: 80px;
+		}
+
+		&-wrapper {
+			align-items: flex-end;
+			display: flex;
+		}
+
+		&-item {
+			display: flex;
+			margin: 0 25px;
+			position: relative;
+			width: 120px;
+
+			@include breakpoint(medium) {
+				width: 175px;
+				margin: 0 30px;
+			}
+
+			@include breakpoint(large) {
+				width: 200px;
+				margin: 0 calc(67px / 2);
+			}
+		}
+	}
+
+	&__link {
+		margin-top: 48px;
+
+		@include breakpoint(large) {
+			margin-top: 80px;
+		}
+	}
+}

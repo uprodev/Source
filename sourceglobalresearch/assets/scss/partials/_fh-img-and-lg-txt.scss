@@ -1,0 +1,75 @@
+.fh-img-and-lg-txt {
+	background: $colour_black;
+	color: $colour_white;
+	padding: 0 0 64px 0;
+	position: relative;
+
+	@include breakpoint(medium) {
+		height: 600px;
+		min-height: 600px;
+		padding: 64px 0;
+	}
+
+	@include breakpoint(large) {
+		height: 700px;
+		min-height: 700px;
+		padding: 80px 0;
+	}
+
+	@include breakpoint(xlarge) {
+		// height: 876px;
+		// min-height: 876px;
+	}
+
+	.grid-container,
+	.grid-x,
+	.cell {
+		height: 100%;
+	}
+
+	&__image-wrap {
+		@include aspectBox(1, 1);
+		margin-bottom: 44px;
+		position: relative;
+
+		@include breakpoint(medium) {
+			bottom: 0;
+			margin-bottom: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 50%;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: center;
+
+		&-text {
+			font-family: $font_gt_sectra_medium;
+			@include fontSize(40px);
+			line-height: 1.37;
+			max-width: 370px;
+
+			@include breakpoint(large) {
+				@include fontSize(60px);
+				max-width: 100%;
+			}
+
+			@include breakpoint(xlarge) {
+				// @include fontSize(70px);
+			}
+		}
+
+		&-text + .arrow-link {
+			margin-top: 30px;
+
+			@include breakpoint(large) {
+				margin-top: 40px;
+			}
+		}
+	}
+}

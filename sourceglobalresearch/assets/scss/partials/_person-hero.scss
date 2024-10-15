@@ -1,0 +1,66 @@
+.person-hero {
+	padding: 64px 0;
+
+	@include breakpoint(large) {
+		padding: 0;
+	}
+
+	&__content {
+		margin-bottom: 32px;
+
+		@include breakpoint(large) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-bottom: 0;
+			min-height: 100%;
+			padding: 64px 0 100px;
+		}
+	}
+
+	&__crumbs {
+		align-items: center;
+		@include fontSize(20px);
+		display: flex;
+		flex-wrap: wrap;;
+		font-weight: 500;
+		line-height: 1.3;
+		margin-bottom: 8px;
+
+		@include breakpoint(large) {
+			@include fontSize(18px);
+		}
+	}
+
+	&__heading {
+		font-family: $font_gt_sectra_medium;
+		@include fontSize(40px);
+		line-height: 1.21;
+
+		@include breakpoint(medium) {
+			@include fontSize(50px);
+		}
+
+		@include breakpoint(large) {
+			@include fontSize(72px);
+			line-height: 1.25;
+		}
+
+		@include breakpoint(xlarge) {
+			// @include fontSize(80px);
+		}
+
+		@include breakpoint(xxlarge) {
+			// @include fontSize(100px);
+		}
+
+		strong {
+			font-weight: normal;
+		}
+	}
+
+	&__image-wrap {
+		@include aspectBox(953, 644);
+		position: relative;
+	}
+}

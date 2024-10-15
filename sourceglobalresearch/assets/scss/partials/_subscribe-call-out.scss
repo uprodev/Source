@@ -1,0 +1,157 @@
+.subscribe-call-out {
+	padding: 64px 0;
+
+	@include breakpoint(medium) {
+		// padding: 80px 0;
+	}
+
+	@include breakpoint(large) {
+		padding: 110px 0;
+	}
+
+	@include breakpoint(xlarge) {
+		padding: 160px 0;
+	}
+
+	&--yellow {
+		.subscribe-call-out__inner {
+			border-top: 4px solid $colour_yellow;
+
+			@include breakpoint(large) {
+				border-left: 10px solid $colour_yellow;
+				border-top: none;
+			}
+		}
+	}
+
+	&--red {
+		.subscribe-call-out__inner {
+			border-top: 4px solid $colour_red;
+
+			@include breakpoint(large) {
+				border-left: 10px solid $colour_red;
+				border-top: none;
+			}
+		}
+	}
+
+	&--green {
+		.subscribe-call-out__inner {
+			border-top: 4px solid $colour_green;
+
+			@include breakpoint(large) {
+				border-left: 10px solid $colour_green;
+				border-top: none;
+			}
+		}
+	}
+
+	&--purple {
+		.subscribe-call-out__inner {
+			border-top: 4px solid $colour_purple;
+
+			@include breakpoint(large) {
+				border-left: 10px solid $colour_purple;
+				border-top: none;
+			}
+		}
+	}
+
+	&--blue {
+		.subscribe-call-out__inner {
+			border-top: 4px solid $colour_blue;
+
+			@include breakpoint(large) {
+				border-left: 10px solid $colour_blue;
+				border-top: none;
+			}
+		}
+	}
+
+	&__inner {
+		background: $colour_black;
+		border-top: 4px solid $colour_purple;
+		color: $colour_white;
+		padding: 34px 24px 54px;
+		position: relative;
+		transition: border .3s ease-in-out;
+
+		@include breakpoint(medium) {
+			margin: 0 auto;
+			max-width: 650px;
+			padding: 34px 32px 54px;
+		}
+
+		@include breakpoint(large) {
+			align-items: center;
+			border-top: none;
+			border-left: 10px solid $colour_purple;
+			display: flex;
+			justify-content: space-between;
+			margin: 0;
+			max-width: 100%;
+			padding: 64px;
+		}
+
+		@include breakpoint(xlarge) {
+			padding: 64px 110px;
+		}
+
+		@include breakpoint(xxlarge) {
+			padding: 64px 120px;
+		}
+
+		&:hover {
+			@include breakpoint(large) {
+				border-left-width: 20px;
+			}
+		}
+	}
+
+	&__title {
+		font-family: $font_gt_sectra_medium;
+		@include fontSize(32px);
+		line-height: 1.25;
+
+		@include breakpoint(large) {
+			@include fontSize(36px);
+		}
+
+		@include breakpoint(large) {
+			// @include fontSize(40px);
+			max-width: 685px;
+		}
+	}
+
+	&__title + &__link {
+		margin-top: 42px;
+
+		@include breakpoint(large) {
+			margin-top: 0;
+		}
+	}
+
+	&__link {
+		@include breakpoint(large) {
+			margin-left: 64px;
+		}
+
+		.arrow-link {
+			&:after {
+				bottom: 0;
+				content: '';
+				display: block;
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		}
+
+		.arrow-link__arrow {
+			svg path {
+				fill: $colour_white !important;
+			}
+		}
+	}
+}

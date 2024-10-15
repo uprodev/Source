@@ -1,0 +1,274 @@
+.contact-form {
+	padding: 64px 0;
+
+	@include breakpoint(medium) {
+		padding: 0 0 80px 0;
+	}
+
+	@include breakpoint(large) {
+		padding: 0 0 100px;
+	}
+
+	@include breakpoint(xlarge) {
+		padding: 0 0 120px;
+	}
+
+	&__inner {
+		max-width: 550px;
+
+		@include breakpoint(large) {
+			max-width: 600px;
+		}
+
+		@include breakpoint(xlarge) {
+			max-width: 100%;
+		}
+	}
+
+	&__intro {
+		@include fontSize(20px);
+		font-weight: 500;
+		line-height: 1.6;
+		margin-bottom: 24px;
+
+		@include breakpoint(large) {
+			@include fontSize(30px);
+			line-height: 1.65;
+			margin-bottom: 32px;
+		}
+	}
+
+	&__required-fields-text {
+		@include fontSize(16px);
+
+		@include breakpoint(large) {
+			@include fontSize(18px);
+		}
+
+		@include breakpoint(xlarge) {
+			// @include fontSize(20px);
+		}
+	}
+
+	&__form {
+		@include fontSize(16px);
+		margin-top: 32px;
+
+		@include breakpoint(large) {
+			@include fontSize(18px);
+			margin-top: 56px;
+		}
+
+		.gform_wrapper {
+			.gform_validation_errors {
+				background: none;
+				border: none;
+				box-shadow: none;
+				margin: 0 0 32px 0;
+				padding: 0;
+
+				.gform_submission_error {
+					color: $colour_error;
+					@include fontSize(16px);
+					font-weight: 400;
+					line-height: 1.4;
+
+					@include breakpoint(large) {
+						@include fontSize(18px);
+					}
+				}
+
+				.gform-icon {
+					display: none;
+				}
+			}
+
+			.gform_heading {
+				.gform_required_legend {
+					display: none;
+				}
+			}
+
+			.gform_body {
+				.gform_fields {
+					.gfield {
+						margin-bottom: 24px;
+
+						@include breakpoint(large) {
+							margin-bottom: 48px;
+						}
+
+						&.gfield_error {
+							label {
+								color: $colour_black;
+							}
+
+							.ginput_container {
+								input {
+									border-color: $colour_error;
+								}
+							}
+
+							.validation_message {
+								color: $colour_error;
+								@include fontSize(16px);
+
+								@include breakpoint(large) {
+									@include fontSize(18px);
+								}
+							}
+						}
+
+						.gfield_label {
+							display: block;
+							@include fontSize(16px);
+							font-weight: 400;
+							margin-bottom: 8px;
+
+							@include breakpoint(large) {
+								@include fontSize(20px);
+								margin-bottom: 18px;
+							}
+
+							.gfield_required {
+								color: inherit;
+							}
+						}
+
+						.ginput_container {
+							input {
+								appearance: none;
+								border: 1px solid $colour_black;
+								border-radius: 0;
+								display: block;
+								@include fontSize(16px);
+								height: 40px;
+								padding: 5px 10px;
+								width: 100%;
+
+								@include breakpoint(large) {
+									@include fontSize(18px);
+									height: 58px;
+									padding: 5px 15px;
+								}
+							}
+
+							textarea {
+								appearance: none;
+								border: 1px solid $colour_black;
+								border-radius: 0;
+								display: block;
+								@include fontSize(16px);
+								height: 120px;
+								padding: 5px 10px;
+								width: 100%;
+
+								@include breakpoint(large) {
+									@include fontSize(18px);
+									height: 174px;
+									padding: 15px;
+								}
+							}
+
+							select {
+								appearance: none;
+								background-color: $colour_white;
+								background-image: url('../images/select-arrow-down.svg');
+								background-position: top 16px right 10px;
+								background-repeat: no-repeat;
+								background-size: 14px;
+								border: 1px solid $colour_black;
+								border-radius: 0;
+								color: $colour_black;
+								display: block;
+								@include fontSize(16px);
+								height: 40px;
+								padding: 5px 10px;
+								width: 100%;
+
+								@include breakpoint(large) {
+									@include fontSize(18px);
+									background-position: top 25px right 20px;
+									background-size: 18px;
+									height: 58px;
+									padding: 5px 15px;
+								}
+							}
+
+							input,
+							textarea,
+							select {
+								transition: outline .2s ease;
+
+								&:focus {
+									outline-offset: 0;
+									outline: 1px solid $colour_black;
+								}
+							}
+						}
+
+						.validation_message {
+							border: none;
+							background: none;
+							color: $colour_error;
+							@include fontSize(16px);
+							margin-top: 8px;
+							padding: 0;
+
+							@include breakpoint(large) {
+								@include fontSize(18px);
+								margin-top: 18px;
+							}
+						}
+					}
+
+					.gform_validation_container {
+						height: 0;
+						margin-bottom: 0;
+						opacity: 0;
+						visibility: hidden;
+					}
+				}
+			}
+
+			.gform_footer {
+				margin: 0;
+				padding: 0;
+
+				.gform_button {
+					background: $colour_black;
+					border: none;
+					border-radius: 0;
+					color: $colour_white;
+					cursor: pointer;
+					display: block;
+					@include fontSize(16px);
+					font-weight: 700;
+					height: 48px;
+					margin-bottom: 0;
+					padding: 10px 30px;
+					text-transform: capitalize;
+
+					@include breakpoint(large) {
+						@include fontSize(20px);
+						height: 58px;
+						padding: 15px 35px;
+					}
+
+					&:focus {
+						outline-offset: 0;
+						outline: 1px solid $colour_black;
+					}
+				}
+			}
+		}
+
+		.gform_confirmation_wrapper {
+			@include fontSize(16px);
+
+			@include breakpoint(large) {
+				@include fontSize(20px);
+			}
+		}
+	}
+}

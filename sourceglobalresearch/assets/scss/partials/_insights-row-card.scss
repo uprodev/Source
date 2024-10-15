@@ -1,0 +1,129 @@
+.insights-row-card {
+	margin-bottom: 32px;
+	position: relative;
+
+	@include breakpoint(medium) {
+		max-width: calc(100% - 25px);
+	}
+
+	@include breakpoint(large) {
+		margin-bottom: 64px;
+		max-width: calc(100%);
+	}
+
+	&--no-image {
+		border-left: 4px solid $colour_black;
+		padding-bottom: 10px;
+		padding-left: 24px;
+	}
+
+	&:hover {
+		.insights-row-card__image-wrap .img-background {
+			transform: translateX(0);
+		}
+	}
+
+	&__image-wrap {
+		background: rgba($colour_secondary_grey, .15);
+		@include aspectBox(272, 161);
+		margin-bottom: 24px;
+		overflow: hidden;
+		position: relative;
+
+		.img-background {
+			min-width: calc(100% + 10px);
+			transform: translateX(-10px);
+			transition: transform .4s ease;
+		}
+	}
+
+	&__image-podcast-indicator {
+		align-items: center;
+		background: $colour_offblack;
+		bottom: 0;
+		display: flex;
+		height: 60px;
+		justify-content: center;
+		left: 0;
+		position: absolute;
+		width: 65px;
+
+		@include breakpoint(xlarge) {
+			height: 70px;
+			width: 80px;
+		}
+
+		svg {
+			transform: translate3d(-3px, 0, 0);
+			width: 28px;
+
+			@include breakpoint(xlarge) {
+				transform: translate3d(-3px, 0, 0);
+				width: 34px;
+			}
+		}
+	}
+
+	&__meta {
+		@include fontSize(14px);
+		font-weight: 500;
+		display: flex;
+		line-height: 1;
+		margin-bottom: 8px;
+
+		@include breakpoint(medium) {
+			margin-bottom: 11px;
+		}
+
+		&-separator {
+			margin: 0 5px;
+		}
+	}
+
+	&__title {
+		font-family: $font_gt_sectra_medium;
+		@include fontSize(28px);
+		line-height: 1.43;
+		font-weight: normal;
+		margin-bottom: 32px;
+
+		@include breakpoint(medium) {
+			@include fontSize(26px);
+			line-height: 1.3;
+		}
+	}
+
+	&__link {
+		align-items: center;
+		font-family: $font_gt_sectra_medium;
+		@include fontSize(22px);
+		display: flex;
+		line-height: 1;
+
+		&-arrow {
+			flex-shrink: 0;
+			margin: 2px 0 0 8px;
+			transition: all .3s ease-out;
+			width: 34px;
+
+			svg {
+				display: block;
+			}
+		}
+
+		&:after {
+			bottom: 0;
+			content: '';
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+
+		&:hover {
+			.insights-row-card__link-arrow {
+				transform: translate3d(10px, 0px, 0px);
+			}
+		}
+	}
+}

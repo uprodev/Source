@@ -1,0 +1,190 @@
+.compressed-services {
+	background: $colour_black;
+	color: $colour_white;
+	padding: 64px 0;
+
+	@include breakpoint(large) {
+		padding: 154px 0;
+	}
+
+	@include breakpoint(xlarge) {
+		// padding: 200px 0;
+	}
+
+	&__title {
+		font-family: $font_gt_sectra_medium;
+		@include fontSize(32px);
+		line-height: 1.25;
+		margin-bottom: 24px;
+		transform-origin: top left;
+		transition: all .2s ease-in-out;
+
+		@include breakpoint(large) {
+			@include fontSize(40px);
+			margin-bottom: 50px;
+		}
+
+		@include breakpoint(xlarge) {
+			// margin-bottom: 80px;
+		}
+	}
+
+	&__description {
+		@include fontSize(20px);
+		line-height: 32px;
+		line-height: 1.6;
+		max-width: 600px;
+		transform-origin: top left;
+		transition: all .2s ease-in-out;
+
+		@include breakpoint(large) {
+			@include fontSize(26px);
+			max-width: 760px;
+		}
+
+		@include breakpoint(xlarge) {
+			// @include fontSize(30px);
+			// max-width: 986px;
+		}
+	}
+
+	&__swiper-controls {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 64px;
+		padding-bottom: 32px;
+		width: 73px;
+
+		&-control-desktop,
+		&-control {
+			cursor: pointer;
+			width: 15px;
+
+			svg {
+				display: flex;
+				width: 100%;
+			}
+
+			&.swiper-button-disabled {
+				opacity: .3;
+			}
+		}
+	}
+
+	&__swiper-wrap {
+		border-top: 4px solid $colour_white;
+	}
+
+	&__slide {
+		&-inner {
+			padding: 16px 0 0 0;
+			position: relative;
+
+			@include breakpoint(medium) {
+				padding: 24px 0 0 0;
+			}
+		}
+
+		&-title {
+			font-family: $font_gt_sectra_medium;
+			@include fontSize(32px);
+			line-height: 1.25;
+			margin-bottom: 24px;
+		}
+
+		&-description {
+			@include fontSize(18px);
+			line-height: 1.55;
+		}
+
+		.arrow-link {
+			margin-top: 24px;
+
+			&:after {
+				bottom: 0;
+				content: '';
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		}
+	}
+
+	&__cards {
+		margin-top: 64px;
+
+		@include breakpoint(large) {
+			margin-top: 154px;
+		}
+
+		@include breakpoint(xlarge) {
+			// margin-top: 196px;
+		}
+	}
+
+	&__card {
+		margin-bottom: 64px;
+		padding: 0 8% 0 0;
+		position: relative;
+
+		@include breakpoint(large) {
+			margin-bottom: 60px;
+			max-width: 400px;
+		}
+
+		@include breakpoint(xlarge) {
+			// margin-bottom: 68px;
+			max-width: 100%;
+		}
+
+		&-title {
+			font-family: $font_gt_sectra_medium;
+			line-height: 1.27;
+			@include fontSize(32px);
+			margin-bottom: 25px;
+
+			@include breakpoint(large) {
+				@include fontSize(50px);
+			}
+
+			@include breakpoint(xlarge) {
+				// @include fontSize(60px);
+			}
+		}
+
+		&-description {
+			@include fontSize(18px);
+			line-height: 1.55;
+			margin-bottom: 10px;
+
+			@include breakpoint(large) {
+				@include fontSize(20px);
+				line-height: 1.45;
+				margin-bottom: 40px;
+			}
+
+			@include breakpoint(xlarge) {
+				// @include fontSize(22px);
+				margin-bottom: 48px;
+			}
+		}
+
+		.compressed-services__cta-link {
+			// height: auto;
+
+			.arrow-link__inner {
+				height: 0;
+			}
+
+			&:after {
+				bottom: 0;
+				content: '';
+				left: 0;
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+		}
+	}
+}

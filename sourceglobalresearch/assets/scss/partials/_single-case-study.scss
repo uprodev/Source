@@ -1,0 +1,118 @@
+.single-case-study {
+	padding: 0 0 64px;
+
+	@include breakpoint(medium) {
+		padding: 64px 0;
+	}
+
+	@include breakpoint(large) {
+		padding: 80px 0;
+	}
+
+	@include breakpoint(xlarge) {
+		padding: 100px 0;
+	}
+
+	&__image {
+		@include aspectBox(320, 397);
+		margin: 0 -24px;
+		position: relative;
+
+		@include breakpoint(medium) {
+			@include aspectBox(320, 320);
+			margin: 0;
+			max-width: 550px;
+		}
+
+		@include breakpoint(large) {
+			@include aspectBox(320, 397);
+			max-width: 100%;
+			min-height: 100%;
+		}
+	}
+
+	&__content {
+		padding: 54px 0 0 0;
+
+		@include breakpoint(medium) {
+			max-width: 600px;
+		}
+
+		@include breakpoint(large) {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			max-width: 100%;
+			min-height: 100%;
+			padding: 32px 0;
+		}
+
+		&-meta {
+			@include fontSize(14px);
+			font-weight: 500;
+			line-height: 1;
+			margin-bottom: 24px;
+
+			@include breakpoint(large) {
+				@include fontSize(18px);
+				margin-bottom: 40px;
+			}
+
+			@include breakpoint(xlarge) {
+				// @include fontSize(20px);
+				// margin-bottom: 60px;
+			}
+
+			&-separator {
+				margin: 0 4px;
+
+				@include breakpoint(large) {
+					@include fontSize(22px);
+					margin: 0 12px;
+				}
+
+				@include breakpoint(xlarge) {
+					// @include fontSize(26px);
+					// margin: 0 15px;
+				}
+			}
+		}
+
+		&-title {
+			font-family: $font_gt_sectra_medium;
+			@include fontSize(32px);
+			line-height: 1.4;
+			margin-bottom: 24px;
+
+			@include breakpoint(large) {
+				@include fontSize(50px);
+				margin-bottom: 40px;
+			}
+
+			@include breakpoint(xlarge) {
+				// @include fontSize(60px);
+				// margin-bottom: 60px;
+			}
+		}
+
+		&-description {
+			@include fontSize(18px);
+			line-height: 1.78;
+			margin-bottom: 24px;
+
+			@include breakpoint(large) {
+				@include fontSize(20px);
+				line-height: 1.6;
+				margin-bottom: 40px;
+			}
+
+			@include breakpoint(xlarge) {
+				// @include fontSize(24px);
+				// margin-bottom: 60px;
+			}
+		}
+
+		.arrow-link {
+		}
+	}
+}

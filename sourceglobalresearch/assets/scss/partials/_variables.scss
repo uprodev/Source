@@ -1,0 +1,36 @@
+// Colours
+$colour_white: rgba(255, 255, 255, 1);
+$colour_offwhite: rgba(245, 245, 245, 1);
+$colour_very_slightly_dark_white: rgba(251, 251, 251, 1);
+$colour_grey: rgba(196, 196, 196, 1);
+$colour_black: rgba(0, 0, 0, 1);
+$colour_offblack: rgba(20, 20, 20, 1);
+$colour_error: rgba(255, 0, 0, 1);
+
+// #FF004C
+$colour_red: rgba(255, 0, 76, 1);
+// #A600FF
+$colour_purple: rgba(166, 0, 255, 1);
+// #FFBB00
+$colour_yellow: rgba(255, 187, 0, 1);
+// #00DEDE
+$colour_blue: rgba(0, 222, 222, 1);
+// #00F07C
+$colour_green: rgba(0, 240, 124, 1);
+// #FBFBFB
+$colour_light_grey: rgba(251, 251, 251, 1);
+// #BCBCBC
+$colour_secondary_grey: rgba(188, 188, 188, 1);
+// #C9C9C9
+$colour_tertiary_grey: rgba(201, 201, 201, 1);
+
+// Work Sans
+// Regular 400
+// Medium 500
+// Bold 700
+$font_work_sans: 'Work Sans', sans-serif;
+$font_gt_sectra: 'GT Sectra', serif;
+$font_gt_sectra_medium: 'GT Sectra Medium', serif;
+
+// Cubic Bezier Curve
+$bounce_curve: cubic-bezier(0.35, 0.43, 0.45, 1.15);

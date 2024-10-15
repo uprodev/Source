@@ -1,0 +1,61 @@
+.grid-overlay {
+	$colour: rgba(hotpink, .1);
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	position: fixed;
+	pointer-events: none;
+	right: 0;
+	top: 0;
+	transition: opacity .2s ease-in-out;
+
+	&.active {
+		opacity: 1;
+	}
+
+	.grid-container,
+	.grid-x {
+		height: 100%;
+	}
+
+	.cell {
+		height: 100%;
+
+		> div {
+			background: rgba(hotpink, .3);
+			height: 100%;
+		}
+	}
+	
+	&-button {
+		color: $colour;
+		border-left: 6px solid;
+		border-right: 6px solid;
+		bottom: 10px;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		left: 10px;
+		margin: 0;
+		outline: none;
+		padding: 0;
+		position: fixed;
+		height: 24px;
+		transition: all .2s ease-in-out;
+		width: 24px;
+
+		&:before {
+			background: currentColor;
+			content: '';
+			height: 24px;
+			margin: 0 3px;
+			width: 6px;
+		}
+
+		&:hover,
+		&:focus {
+			$colour: rgba(hotpink, .3);
+			color: $colour;
+		}
+	}
+}

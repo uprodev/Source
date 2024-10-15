@@ -1,0 +1,214 @@
+.careers-accordion-list {
+	background: $colour_light_grey;
+	padding: 64px 0;
+
+	@include breakpoint(medium) {
+		padding: 80px 0;
+	}
+
+	@include breakpoint(large) {
+		padding: 100px 0;
+	}
+
+	@include breakpoint(xlarge) {
+		padding: 120px 0;
+	}
+
+	&__title {
+		font-family: $font_gt_sectra_medium;
+		@include fontSize(32px);
+		line-height: 1.25;
+		margin-bottom: 42px;
+
+		@include breakpoint(large) {
+			@include fontSize(40px);
+			margin-bottom: 48px;
+		}
+	}
+
+	&__accordion {
+		&-item {
+			background: $colour_white;
+			margin-bottom: 8px;
+			padding-bottom: 25px;
+
+			@include breakpoint(medium) {
+				margin-bottom: 10px;
+			}
+
+			@include breakpoint(large) {
+				margin-bottom: 13px;
+				padding-bottom: 0;
+			}
+
+			&.has-details {
+				.careers-accordion-list__accordion-item-head-control {
+					cursor: pointer;
+				}
+			}
+
+			&-head {
+				@include breakpoint(large) {
+					align-items: center;
+					display: flex;
+					justify-content: space-between;
+				}
+
+				&-control {
+					display: block;
+					font-family: $font_gt_sectra_medium;
+					@include fontSize(24px);
+					line-height: 1.5;
+					padding: 32px 24px 12px 24px;
+					text-align: left;
+
+					@include breakpoint(medium) {
+						padding: 32px 32px 12px 32px;
+					}
+
+					@include breakpoint(large) {
+						@include fontSize(28px);
+						padding: 40px 38px;
+					}
+
+					@include breakpoint(xlarge) {
+						// @include fontSize(28px);
+						padding: 48px 44px;
+					}
+
+					&-meta {
+						color: $colour_secondary_grey;
+					}
+				}
+			}
+
+			&-apply-link {
+				align-items: center;
+				display: flex;
+				@include fontSize(20px);
+				line-height: 1;
+				padding: 12px 24px 12px 24px;
+
+				@include breakpoint(medium) {
+					padding: 12px 32px 12px 32px;
+				}
+
+				@include breakpoint(large) {
+					padding: 18px 32px;
+					white-space: nowrap;
+				}
+
+				@include breakpoint(xlarge) {
+					padding: 20px 38px;
+					white-space: nowrap;
+				}
+
+				&--body {
+					height: 48px;
+					margin-top: 40px !important;
+					max-width: 190px;
+					padding: 0 32px 0 0;
+					width: auto;
+
+					.careers-accordion-list__accordion-item-apply-link-icon {
+						margin-top: 0;
+					}
+				}
+
+				&-icon {
+					margin-left: 12px;
+					width: 9px;
+
+					@include breakpoint(large) {
+						margin-left: 25px;
+						width: 14px;
+					}
+				}
+			}
+
+			&-body {
+				height: 0;
+				overflow: hidden;
+
+				&-inner {
+					@include fontSize(18px);
+					line-height: 32px;
+					line-height: 1.8;
+					padding: 32px 24px 16px;
+
+					@include breakpoint(medium) {
+						padding: 32px 32px 16px;
+					}
+
+					@include breakpoint(large) {
+						@include fontSize(20px);
+						line-height: 2;
+						line-height: 40px;
+						padding: 4px 44px 48px;
+					}
+
+					* + *  {
+						margin-top: 1rem;
+
+						@include breakpoint(large) {
+							margin-top: 26px;
+						}
+					}
+
+					h2, h3, h4, h5 {
+						font-family: $font_gt_sectra_medium;
+					}
+
+					h2, h3 {
+						@include fontSize(24px);
+						line-height: 1.5;
+					}
+
+					h4, h5 {
+						@include fontSize(22px);
+						line-height: 1.5;
+					}
+
+					strong {
+						font-weight: 700;
+					}
+
+					p + ul {
+						margin-top: 45px;
+					}
+
+					ul {
+						list-style-type: disc;
+						margin-left: 20px;
+
+						li + li {
+							margin-top: 0;
+						}
+					}
+
+					p a,
+					li a {
+						position: relative;
+
+						&:after {
+							background: $colour_black;
+							bottom: 0;
+							content: '';
+							height: 1px;
+							position: absolute;
+							left: 0;
+							transition: all .2s ease;
+							width: 100%;
+						}
+
+						&:hover {
+							&:after {
+								opacity: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

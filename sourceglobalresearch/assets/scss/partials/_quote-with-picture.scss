@@ -1,0 +1,152 @@
+.quote-with-picture {
+	padding: 64px 0;
+
+	@include breakpoint(medium) {
+		padding: 80px 0;
+	}
+
+	@include breakpoint(large) {
+		padding: 100px 0;
+	}
+
+	@include breakpoint(xlarge) {
+		padding: 160px 0;
+	}
+
+	&--purple {
+		.quote-with-picture__quote-marks {
+			svg {
+				path {
+					fill: $colour_purple;
+				}
+			}
+		}
+	}
+
+	&--red {
+		.quote-with-picture__quote-marks {
+			svg {
+				path {
+					fill: $colour_red;
+				}
+			}
+		}
+	}
+
+	&--yellow {
+		.quote-with-picture__quote-marks {
+			svg {
+				path {
+					fill: $colour_yellow;
+				}
+			}
+		}
+	}
+
+	&--green {
+		.quote-with-picture__quote-marks {
+			svg {
+				path {
+					fill: $colour_green;
+				}
+			}
+		}
+	}
+
+	&--blue {
+		.quote-with-picture__quote-marks {
+			svg {
+				path {
+					fill: $colour_blue;
+				}
+			}
+		}
+	}
+
+	&__quote {
+		margin-top: 44px;
+
+		@include breakpoint(large) {
+			margin-top: 400px;
+			max-width: 90%;
+		}
+
+		&-fig {
+			margin: 0;
+			max-width: 650px;
+			padding: 0;
+
+			@include breakpoint(large) {
+				max-width: 100%;
+			}
+		}
+
+		&-marks {
+			margin-bottom: 40px;
+			width: 114px;
+
+			@include breakpoint(large) {
+				margin-bottom: 60px;
+				width: 173px;
+			}
+
+			svg {
+				display: block;
+			}
+		}
+
+		&-quote {
+			font-family: $font_gt_sectra_medium;
+			@include fontSize(32px);
+			line-height: 1.25;
+			margin: 0;
+			padding: 0;
+
+			@include breakpoint(large) {
+				@include fontSize(42px);
+			}
+
+			@include breakpoint(xlarge) {
+				// @include fontSize(50px);
+				// line-height: 1.2;
+			}
+		}
+
+		&-attribution {
+			@include fontSize(18px);
+			margin-top: 24px;
+			line-height: 1.75;
+
+			@include breakpoint(large) {
+				@include fontSize(20px);
+				margin-top: 36px;
+			}
+
+			@include breakpoint(xlarge) {
+				// @include fontSize(24px);
+			}
+		}
+	}
+
+	&__image {
+		@include aspectBox(263, 291);
+		margin-left: auto;
+		margin-right: -25px;
+		max-width: 400px;
+		position: relative;
+		width: 97%;
+
+		@include breakpoint(large) {
+			@include aspectBox(594, 655);
+			margin-right: -12px;
+			max-width: calc(100%);
+			position: sticky;
+			top: 115px;
+			width: calc(100%);
+		}
+
+		@include breakpoint(xlarge) {
+			margin-right: -14px;
+		}
+	}
+}

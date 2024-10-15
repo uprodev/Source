@@ -1,0 +1,41 @@
+.insights-row {
+	padding: 64px 0 32px;
+
+	@include breakpoint(large) {
+		padding: 80px 0 16px;
+	}
+
+	&__title {
+		margin-bottom: 25px;
+
+		@include breakpoint(medium) {
+			margin-bottom: 35px;
+		}
+
+		@include breakpoint(large) {
+			margin-bottom: 45px;
+		}
+
+		@include breakpoint(xlarge) {
+			margin-bottom: 55px;
+		}
+
+		&-heading {
+			font-family: $font_gt_sectra_medium;
+			@include fontSize(28px);
+			line-height: 1.1;
+
+			@include breakpoint(medium) {
+				@include fontSize(30px);
+			}
+
+			@include breakpoint(large) {
+				@include fontSize(40px);
+			}
+
+			@include breakpoint(xlarge) {
+				// @include fontSize(40px);
+			}
+		}
+	}
+}

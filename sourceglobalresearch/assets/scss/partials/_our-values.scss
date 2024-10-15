@@ -1,0 +1,103 @@
+.our-values {
+	background: $colour_black;
+	color: $colour_white;
+	padding: 64px 0 0 0;
+
+	@include breakpoint(large) {
+		padding: 160px 0 0;
+	}
+
+	@include breakpoint(xlarge) {
+		// padding: 208px 0 0;
+	}
+
+	&__title {
+		font-family: $font_gt_sectra_medium;
+		@include fontSize(32px);
+		line-height: 1.25;
+		margin-bottom: 56px;
+
+		@include breakpoint(large) {
+			@include fontSize(40px);
+			margin-bottom: 160px;
+		}
+	}
+
+	&__value {
+		margin: 0 auto 64px;
+		max-width: 350px;
+
+		@include breakpoint(medium) {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			margin-right: 0;
+			max-width: 780px;
+		}
+
+		@include breakpoint(large) {
+			display: block;
+			margin-bottom: 100px;
+		}
+
+		@include breakpoint(xlarge) {
+			margin-bottom: 140px;
+		}
+
+		&-image {
+			@include aspectBox(292, 271);
+			margin-bottom: 40px;
+			position: relative;
+
+			@include breakpoint(medium) {
+				flex-shrink: 0;
+				margin-bottom: 0;
+				margin-right: 4%;
+				max-width: 320px;
+				width: 47%;
+			}
+
+			@include breakpoint(large) {
+				margin-bottom: 56px;
+				margin-right: 0;
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+
+		&-content {
+			@include breakpoint(medium) {
+				flex-grow: 1;
+				// max-width: 400px;
+				width: 47%;
+			}
+
+			@include breakpoint(large) {
+				width: 100%;
+			}
+		}
+
+		&-title {
+			font-family: $font_gt_sectra_medium;
+			@include fontSize(32px);
+			line-height: 1.25;
+			margin-bottom: 24px;
+
+			@include breakpoint(large) {
+				@include fontSize(40px);
+				margin-bottom: 31px;
+			}
+		}
+
+		&-description {
+			@include fontSize(18px);
+			line-height: 1.76;
+
+			@include breakpoint(large) {
+				@include fontSize(22px);
+				line-height: 32px;
+				margin-bottom: 31px;
+			}
+		}
+	}
+}

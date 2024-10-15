@@ -1,0 +1,147 @@
+.how-can-we-help {
+	padding: 64px 0;
+
+	@include breakpoint(large) {
+		padding: 125px 0;
+	}
+
+	@include breakpoint(xlarge) {
+		// padding: 125px 0 200px;
+	}
+
+	&__head {
+		margin-bottom: 64px;
+
+		@include breakpoint(large) {
+			margin-bottom: 78px;
+		}
+	}
+
+	&__title {
+		color: $colour_black;
+		font-family: $font_gt_sectra_medium;
+		@include fontSize(32px);
+		line-height: 1.25;
+		margin-bottom: 28px;
+		max-width: 600px;
+
+		@include breakpoint(large) {
+			@include fontSize(40px);
+			margin-bottom: 0;
+		}
+	}
+
+	&__description {
+		@include fontSize(20px);
+		line-height: 1.6;
+		margin-bottom: 64px;
+		max-width: 600px;
+
+		@include breakpoint(large) {
+			margin-bottom: 56px;
+			max-width: 100%;
+		}
+
+		@include breakpoint(xlarge) {
+			@include fontSize(24px);
+		}
+	}
+
+	&__link {
+		margin-top: 16px;
+
+		svg {
+			path {
+				fill: $colour_black;
+			}
+		}
+	}
+
+	&__content-cell + &__content-cell {
+		margin-top: 64px;
+
+		@include breakpoint(large) {
+			margin-top: 0;
+		}
+	}
+
+	&__content-cell {
+		&--left {
+			.how-can-we-help__content + .how-can-we-help__content {
+				margin-top: 170px;
+
+				@include breakpoint(xlarge) {
+					margin-top: 208px;
+				}
+			}
+		}
+
+		&--right {
+			.how-can-we-help__content {
+				margin-top: 170px;
+
+				@include breakpoint(xlarge) {
+					margin-top: 208px;
+				}
+			}
+		}
+	}
+
+	&__content {
+		max-width: 600px;
+
+		@include breakpoint(large) {
+			max-width: 100%;
+		}
+
+		&-title {
+			font-family: $font_gt_sectra_medium;
+			@include fontSize(32px);
+			line-height: 1.25;
+			margin-bottom: 24px;
+
+			@include breakpoint(large) {
+				@include fontSize(45px);
+				margin-bottom: 40px;
+			}
+
+			@include breakpoint(xlarge) {
+				// @include fontSize(60px);
+				margin-bottom: 60px;
+			}
+		}
+
+		&-description {	
+			@include fontSize(20px);
+			line-height: 1.6;
+
+			@include breakpoint(xlarge) {
+				// @include fontSize(24px);
+			}
+
+			p + p {
+				margin-top: 1rem;
+			}
+		}
+
+		.arrow-link {
+			margin-top: 18px;
+
+			@include breakpoint(large) {
+				margin-top: 24px;
+			}
+
+			@include breakpoint(xlarge) {
+				margin-top: 32px;
+			}
+		}
+	}
+
+	&__end-link {
+		margin-top: 48px;
+
+		@include breakpoint(xlarge) {
+			margin-top: 80px;
+		}
+	}
+}

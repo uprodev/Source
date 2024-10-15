@@ -1,0 +1,137 @@
+.latest-posts {
+	background: $colour_black;
+	color: $colour_white;
+	overflow: hidden;
+	padding: 64px 0;
+
+	@include breakpoint(large) {
+		padding: 75px 0 110px;
+		position: relative;
+	}
+
+	@include breakpoint(xlarge) {
+		padding: 80px 0 160px;
+		position: relative;
+	}
+
+	&:before {
+		@include breakpoint(large) {
+			bottom: 0;
+			content: '';
+			background: $colour_black;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 20.8%;
+			z-index: 3;
+		}
+	}
+
+	.grid-container,
+	.grid-x {
+		@include breakpoint(large) {
+			position: relative;
+		}
+	}
+
+	&__head-cell {
+		@include breakpoint(large) {
+			background: $colour_black;
+			position: relative;
+			z-index: 3;
+		}
+	}
+
+	&__title {
+		color: $colour_red;
+		@include fontSize(28px);
+		font-family: $font_gt_sectra_medium;
+		line-height: 1.1;
+		margin-bottom: 106px;
+
+		@include breakpoint(medium) {
+			@include fontSize(32px);
+			margin-bottom: 45px;
+		}
+
+		@include breakpoint(large) {
+			color: $colour_white;
+		}
+
+		@include breakpoint(xlarge) {
+			// @include fontSize(40px);
+		}
+	}
+
+	&__swiper-wrap {
+		@include breakpoint(large) {
+			overflow: visible;
+		}
+	}
+
+	&__swiper-container {
+		@include breakpoint(large) {
+			overflow: visible;
+		}
+	}
+
+	&__slide {
+		.latest-posts-card {
+			opacity: .3;
+			transition: opacity .3s ease-in-out;
+		}
+
+		&.swiper-slide-active,
+		&.swiper-slide-next {
+			.latest-posts-card {
+				opacity: 1;
+
+				&:hover {
+					.img-background {
+						transform: translateX(0);
+					}
+				}
+			}
+		}
+
+		&.swiper-slide-prev {
+			.latest-posts-card {
+				opacity: 0;
+			}
+		}
+	}
+
+	&__swiper-controls {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 32px;
+		width: 73px;
+
+		@include breakpoint(large) {
+			margin-bottom: 0;
+			width: 105px;
+		}
+
+		&-control {
+			cursor: pointer;
+			width: 15px;
+
+			@include breakpoint(large) {
+				width: 20px;
+			}
+
+			&:focus-visible {
+				outline-color: white;
+			}
+
+			svg {
+				display: flex;
+				width: 100%;
+			}
+
+			&.swiper-button-disabled {
+				opacity: .3;
+			}
+		}
+	}
+}

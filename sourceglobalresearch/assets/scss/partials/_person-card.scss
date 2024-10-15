@@ -1,0 +1,54 @@
+.person-card {
+	position: relative;
+
+	&__image {
+		@include aspectBox(272, 289);
+		background: $colour_offwhite;
+		margin-bottom: 24px;
+		position: relative;
+
+		@include breakpoint(large) {
+			height: 400px;
+			width: 100%;
+		}
+
+		@include breakpoint(xlarge) {
+			height: 550px;
+			margin-bottom: 32px;
+			width: 100%;
+		}
+	}
+
+	&__role {
+		display: block;
+		@include fontSize(16px);
+		font-weight: 500;
+		line-height: 1.2;
+		margin-bottom: 8px;
+
+		@include breakpoint(xlarge) {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__link {
+		&:after {
+			bottom: 0;
+			content: '';
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+	}
+
+	&__name {
+		@include fontSize(24px);
+		font-family: $font_gt_sectra_medium;
+		line-height: 1.25;
+
+		@include breakpoint(xlarge) {
+			// @include fontSize(28px);
+		}
+	}
+}

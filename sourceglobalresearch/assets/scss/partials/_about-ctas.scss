@@ -1,0 +1,164 @@
+.about-ctas {
+	padding: 64px 0;
+
+	@include breakpoint(medium) {
+		padding: 80px 0;
+	}
+
+	@include breakpoint(large) {
+		padding: 100px 0;
+	}
+
+	@include breakpoint(xlarge) {
+		padding: 160px 0;
+	}
+
+	&__cta-1 {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 68px;
+
+		@include breakpoint(medium) {
+			align-items: flex-start;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		@include breakpoint(large) {
+			padding-bottom: 130px;
+		}
+
+		@include breakpoint(xlarge) {
+			// padding-bottom: 160px;
+		}
+
+		&-content-wrap {
+			order: 2;
+
+			@include breakpoint(medium) {
+				order: 1;
+				width: 50%;
+			}
+
+			@include breakpoint(large) {
+				width: 43.5%;
+			}
+		}
+
+		&-text {
+			@include fontSize(18px);
+			line-height: 1.81;
+			order: 2;
+
+			@include breakpoint(medium) {
+				order: 1;
+			}
+
+			@include breakpoint(large) {
+				@include fontSize(24px);
+				line-height: 1.33;
+			}
+
+			@include breakpoint(xlarge) {
+				// @include fontSize(30px);
+			}
+		}
+
+		.arrow-link {
+			margin-top: 24px;
+
+			@include breakpoint(large) {
+				margin-top: 50px;
+			}
+
+			@include breakpoint(xlarge) {
+				margin-top: 68px;
+			}
+		}
+
+		&-image {
+			@include aspectBox(618, 556);
+			// @include aspectBox(224, 182);
+			margin-bottom: 24px;
+			max-height: 370px;
+			order: 1;
+			position: relative;
+			width: 75%;
+
+			@include breakpoint(medium) {
+				margin-bottom: 0;
+				width: 42%;
+			}
+
+			@include breakpoint(large) {
+				max-height: 540px;
+				width: 43%;
+				// width: 44.7%;
+			}
+		}
+	}
+
+	&__cta-2 {
+		@include breakpoint(medium) {
+			align-items: flex-start;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&-image {
+			@include aspectBox(224, 182);
+			margin-bottom: 24px;
+			margin-left: auto;
+			position: relative;
+			width: 85%;
+
+			@include breakpoint(medium) {
+				margin-bottom: 0;
+				margin-left: 0;
+				width: 43%
+			}
+
+			@include breakpoint(large) {
+				@include aspectBox(590, 480);
+				width: 44.7%
+			}
+		}
+
+		&-content-wrap {
+			@include breakpoint(medium) {
+				width: 50%;
+			}
+
+			@include breakpoint(large) {
+				width: 43.7%;
+			}
+		}
+
+		&-text {
+			@include fontSize(18px);
+			line-height: 1.81;
+			width: 100%;
+
+			@include breakpoint(large) {
+				@include fontSize(24px);
+				line-height: 1.33;
+			}
+
+			@include breakpoint(xlarge) {
+				// @include fontSize(30px);
+			}
+		}
+
+		.arrow-link {
+			margin-top: 24px;
+
+			@include breakpoint(large) {
+				margin-top: 50px;
+			}
+
+			@include breakpoint(xlarge) {
+				margin-top: 68px;
+			}
+		}
+	}
+}

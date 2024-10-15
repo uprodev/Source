@@ -1,0 +1,1045 @@
+/******************************************************************
+Theme Name: Source Global Research
+Description: Another beautiful website built by Hambly Freeman in Exeter, Devon
+Author: Paul Yabsley
+Author URI: http://www.hamblyfreeman.com
+Version: 1.0
+License: GNU General Public License & MIT
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: Sass, Foundation, Responsive
+******************************************************************/
+
+.whitepaper_gravity_form.ui-dialog-content,
+.report_extract_gravity_form.ui-dialog-content,
+#gform_wrapper_5.ui-dialog-content  {
+  color: black;
+}
+
+.whitepaper_gravity_form,
+.report_extract_gravity_form,
+#gform_wrapper_5  {
+  display: none;
+}
+
+table.topic_pairs td {
+  padding-bottom: 1em;
+  vertical-align: top;
+  padding-right: 1em;
+}
+
+table.topic_pairs h4 {
+  margin-top: 0;
+  font-weight: bold;
+  font-family: "GT Sectra";
+  font-size: 120%;
+}
+
+table.topic_pairs td:first-of-type {
+  width: 25%;
+}
+
+.dark-section {
+  background: black;
+  color: white;
+  padding: 2em;
+}
+
+.post_type_white-paper .insight-content__documents {
+  margin-top: 0;
+}
+
+.post_type_white-paper .insight-content__meta-author,
+.post_type_white-paper .insight-content__meta-estimated-reading-time {
+  display: none;
+}
+
+
+section.quotes:last-of-type {
+  padding-top: 0;
+  padding-bottom: 10em;
+}
+
+
+.home-page-hero__subheading {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  max-width: 600px;
+}
+
+@media print,
+screen and (min-width: 64em) {
+  .home-page-hero__subheading {
+    font-size: 26px;
+    font-size: 1.625rem;
+    max-width: 95%;
+  }
+}
+
+@media screen and (min-width: 90em) {
+  .home-page-hero__subheading {
+    max-width: 85%;
+  }
+}
+
+#videoplayerModal {
+  display: none;
+}
+
+#offline-notice {
+  display: flex;
+  justify-content: flex-start;
+  color: yellow;
+  font-size: .875rem;
+  line-height: 24px;
+}
+
+@media screen and (max-width: 94em) {
+  #offline-notice {
+    font-size: 0.774rem;
+  }
+}
+
+@media screen and (max-width: 82em) {
+  #offline-notice {
+    font-size: 0.682rem;
+  }
+
+
+}
+
+
+@media screen and (max-width: 45em) {
+  #offline-notice {
+    line-height: 20px;
+    font-size: 0.565rem;
+  }
+
+
+}
+
+
+/*New CSS*/
+/*
+White Space Page
+home-page-hero-with-login section
+*/
+
+.home-page-hero-with-login {
+  background: #fff;
+  color: #fff;
+  overflow: hidden;
+  color: #000;
+}
+.home-page-hero-with-login__crumb{
+  color: #000;
+  font-family: Work Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.home-page-hero-with-login__content-wrap {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}
+
+.home-page-hero-with-login__heading {
+  font-family: "GT Sectra Medium",serif;
+  font-size: 40px;
+  font-size: 2.5rem;
+  line-height: 1.38;
+  font-weight: normal;
+  margin-bottom: 47px;
+}
+.home-page-hero-with-login__subheading {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  max-width: 600px;
+}
+.home-page-hero-with-login__image-wrap {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  margin-left: -24px;
+  margin-right: -24px;
+  max-height: 420px;
+  overflow: hidden;
+}
+
+.home-page-hero-with-login__image {
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 700px;
+  width: 100%;
+}
+
+@media print, screen and (min-width: 37.5em) {
+  .home-page-hero-with-login {
+    padding-top: 0;
+  }
+  .home-page-hero-with-login__content {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  .home-page-hero-with-login__image-cell {
+    display: flex;
+  }
+
+  .home-page-hero-with-login__content {
+    max-width: 650px;
+    padding: 60px 0;
+  }
+
+  .home-page-hero-with-login__heading {
+    font-size: 80px;
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 68px;
+    padding-right: 10px;
+  }
+
+  .home-page-hero-with-login__subheading {
+    font-size: 26px;
+    font-size: 1.625rem;
+    max-width: 95%;
+  }
+  .home-page-hero-with-login__image-wrap {
+    align-self: center;
+    margin-left: 0;
+    margin-right: 0;
+    max-height: initial;
+    width: 100%;
+  }
+  .home-page-hero-with-login__image {
+    max-width: 100%;
+    min-height: 100%;
+  }
+  .home-page-hero-with-login__image .img-background {
+    object-position: 0;
+  }
+}
+
+
+/*
+what-is-white-space section
+*/
+
+@media print, screen and (min-width: 64em){
+.what-is-white-space {
+    padding: 72px 0;
+}
+}
+
+.what-is-white-space {
+  padding: 72px 0;
+}
+
+@media print, screen and (min-width: 64em) {
+  .what-is-white-space__head {
+    margin-bottom: 78px;
+  }
+}
+
+.what-is-white-space__head {
+  margin-bottom: 64px;
+}
+
+@media print, screen and (min-width: 64em) {
+  .what-is-white-space__title {
+    font-size: 40px;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+}
+.what-is-white-space__title {
+  color: #000;
+  font-family: "GT Sectra Medium",serif;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 28px;
+  max-width: 600px;
+}
+
+.what-is-white-space__link {
+  margin-top: 16px;
+}
+
+/*
+white-space-services section
+*/
+.white-space-services__service{
+    border: 1px solid #A600FF;
+    padding: 30px;
+    background: #FFF;
+}
+
+.white-space-services__service-title{
+    color: #000;
+    font-family: GT Sectra;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-bottom: 27px;
+}
+.white-space-services__service-subtitle{
+    color: #000;
+    font-family: GT Sectra;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    height: 80px;
+}
+.white-space-services__cta-link{
+  padding-top: 50px;
+}
+.white-space-services__cta-link-text{
+    color: #000;
+    font-family: GT Sectra;
+    font-size: 19px;
+    font-style: inherit;
+    font-weight: bold;
+    line-height: normal;
+}
+
+/*
+latest-posts-white-space section
+*/
+
+.latest-posts-white-space {
+  background: black;
+  color: white;
+  padding: 4em 0;
+  margin-bottom: 5em;
+  margin-top: 71px;
+}
+
+.latest-posts-white-space__link {
+  width: 100%;
+  aspect-ratio: 2;
+  position: relative;
+  display: block;
+  margin-bottom: 2em;
+}
+
+.latest-posts-white-space__title {
+  font-size: 22px;
+  font-size: 1.375rem;
+}
+.latest-posts-white-space__cta-link-text{
+  color: #FFF;
+  font-family: GT Sectra;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media print, screen and (min-width: 37.5em) {
+  .latest-posts-white-space__title {
+    font-size: 26px;
+    font-size: 1.625rem;
+    line-height: 1.3;
+  }
+}
+
+.latest-posts-white-space__title {
+  font-family: "GT Sectra Medium",serif;
+  font-size: 28px;
+  font-size: 1.75rem;
+  line-height: 1.43;
+  font-weight: normal;
+  margin-bottom: 32px;
+}
+.latest-posts-white-space__blurb{
+  font-family: Work Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
+.latest-posts-white-space-card__title{
+  font-size: 26px;
+}
+
+/*
+Staggered Text Columns White Space
+*/
+.staggered-text-columns-white-space__cta-1-title , .staggered-text-columns-white-space__cta-2-title {
+  color: #000;
+  font-family: Georgia;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.staggered-text-columns-white-space__cta-1-text, .staggered-text-columns-white-space__cta-2-text{
+  font-family: Work Sans;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+}
+
+.brand-insights__cta-link{
+  padding-bottom: 30px;
+}
+
+.staggered-text-columns-white-space--green .staggered-text-columns-white-space__cta-1-title strong {
+    color: #00f07c;
+}
+.staggered-text-columns-white-space--purple .staggered-text-columns-white-space__cta-1-title strong {
+    color: #a600ff;
+}
+
+.staggered-text-columns-white-space--red .staggered-text-columns-white-space__cta-1-title strong {
+    color: #FF004C;
+}
+
+.staggered-text-columns-white-space--yellow .staggered-text-columns-white-space__cta-1-title strong {
+    color: #FFBB00;
+}
+.staggered-text-columns-white-space--blue .staggered-text-columns-white-space__cta-1-title strong {
+    color: #00DEDE;
+}
+
+
+.staggered-text-columns-white-space--green .staggered-text-columns-white-space__cta-2-title strong {
+    color: #00f07c;
+}
+.staggered-text-columns-white-space--purple .staggered-text-columns-white-space__cta-2-title strong {
+    color: #a600ff;
+}
+
+.staggered-text-columns-white-space--red .staggered-text-columns-white-space__cta-2-title strong {
+    color: #FF004C;
+}
+
+.staggered-text-columns-white-space--yellow .staggered-text-columns-white-space__cta-2-title strong {
+    color: #FFBB00;
+}
+.staggered-text-columns-white-space--blue .staggered-text-columns-white-space__cta-2-title strong {
+    color: #00DEDE;
+}
+
+.new-130-class{
+  padding-bottom: 130px;
+}
+
+.new-0-class{
+  padding-bottom: 0px;
+}
+.staggered-text-columns-white-space__cta-1-title, .staggered-text-columns-white-space__cta-2-title{
+  font-family: GT Sectra Medium;
+}
+
+
+.staggered-text-columns-white-space .large-offset-1{
+  margin-left: 8%;
+}
+.staggered-text-columns-white-space .large-offset-2{
+  margin-left: 8%;
+}
+
+.staggered-text-columns-white-space .img-background {
+  height: 100%;
+  left: 0;
+  object-fit: fill;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/*
+Trends Page CSS
+*/
+
+.full-image {
+  padding: 0px 80px;
+}
+
+.extra-img-background {
+  object-fit: fill;
+}
+
+/*
+Page Introduction CSS
+*/
+
+
+.page-introduction {
+    position: relative;
+    z-index: 10;
+}
+
+
+.page-introduction__content {
+    display: flex;
+    flex-direction: column;
+    min-height: 80%;
+    justify-content: center;
+    padding: 30px 0 15px;
+}
+
+
+@media print,
+screen and (min-width: 37.5em) {
+    .page-introduction__content {
+        margin-top: -10px;
+        padding: 50px 0;
+    }
+}
+
+@media print,
+screen and (min-width: 64em) {
+    .page-introduction__content {
+        margin-top: -20px;
+    }
+}
+
+.page-introduction__heading {
+    font-family: "GT Sectra Medium", serif;
+    font-size: 50px;
+    font-size: 3.125rem;
+    line-height: 1.1;
+    margin-bottom: 1em;
+}
+
+
+
+
+@media print,
+screen and (min-width: 37.5em) {
+    .page-introduction__heading {
+        font-size: 48px;
+        font-size: 3rem;
+    }
+}
+
+@media print,
+screen and (min-width: 64em) {
+    .page-introduction__heading {
+        font-size: 72px;
+        font-size: 3.5rem;
+        max-width: 800px;
+    }
+}
+
+@media screen and (min-width: 90em) {
+    .page-introduction__heading {
+        font-size: 80px;
+        font-size: 5rem;
+        max-width: 90%;
+    }
+}
+
+.page-introduction__heading strong {
+    font-weight: inherit;
+}
+
+.page-introduction--green .page-introduction__heading strong {
+    color: #00f07c;
+}
+.page-introduction--purple .page-introduction__heading strong {
+    color: #a600ff;
+}
+
+.page-introduction--red .page-introduction__heading strong {
+    color: #FF004C;
+}
+
+.page-introduction--yellow .page-introduction__heading strong {
+    color: #FFBB00;
+}
+.page-introduction--blue .page-introduction__heading strong {
+    color: #00DEDE;
+}
+
+
+.page-introduction__image-wrap {
+    height: 100%;
+    /* aspect-ratio: 1.3; */
+}
+
+@media print,
+screen and (min-width: 64em) {
+
+}
+
+.page-introduction__cta-link {
+    width: 10em;
+    max-width: 70%;
+}
+
+.page-introduction__cta_su {
+    margin-top: 1em;
+    font-style: italic;
+}
+
+
+
+/*
+what-is-white-space section
+*/
+@media print, screen and (min-width: 64em){
+  .what-is-white-space {
+      padding: 72px 0;
+  }
+}
+
+.what-is-white-space {
+  padding: 72px 0;
+}
+
+@media print, screen and (min-width: 64em) {
+  .what-is-white-space__head {
+    margin-bottom: 78px;
+  }
+}
+
+.what-is-white-space__head {
+  margin-bottom: 64px;
+}
+
+@media print, screen and (min-width: 64em) {
+  .what-is-white-space__title {
+    font-size: 40px;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+}
+.what-is-white-space__title {
+  color: #000;
+  font-family: "GT Sectra Medium",serif;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 28px;
+  max-width: 600px;
+}
+
+.what-is-white-space__link {
+  margin-top: 16px;
+}
+
+/*
+Request Demo CSS
+*/
+@media print, screen and (min-width: 64em){
+  .request-demo {
+      padding: 72px 0;
+  }
+}
+
+.request-demo {
+  padding: 72px 0;
+}
+
+@media print, screen and (min-width: 64em) {
+  .request-demo__head {
+    margin-bottom: 78px;
+  }
+}
+
+.request-demo__head {
+  margin-bottom: 64px;
+}
+
+@media print, screen and (min-width: 64em) {
+  .request-demo__title {
+    font-size: 40px;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+  }
+}
+.request-demo__title {
+  color: #000;
+  font-family: "GT Sectra Medium",serif;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 28px;
+  max-width: 600px;
+}
+
+.request-demo__link {
+  margin-top: 16px;
+}
+
+
+
+.other-services__service-title{
+  font-size: 40px;
+  height: 170px;
+}
+/* .other-services{
+  padding: 0px;
+} */
+
+
+/*
+Model CSS
+*/
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 9999; /* Sit on top */
+  padding: 60px 0px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px 50px;
+  border: 1px solid #000;
+  width: 70%;
+  color: black;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px){
+  .white-space-services__cell{
+    padding-bottom: 20px;
+  }
+  .latest-posts-white-space__cta-link{
+    padding-bottom: 25px;
+  }
+  .about-ctas__cta-2-image{
+    margin-left: inherit;
+  }
+  .staggered-text-columns-white-space .large-offset-1 {
+  margin-left: 1%;
+}
+  .staggered-text-columns-white-space .large-offset-2 {
+  margin-left: 1%;
+}
+  .home-page-hero-with-login .img-background {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  position: inherit;
+  top: 0;
+  width: 100%;
+}
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .white-space-services__cell{
+    padding-bottom: 20px;
+  }
+  .latest-posts-white-space__title{
+    font-size: 20px;
+  }
+  .latest-posts-white-space__cta-link-text{
+    font-size: 14px;
+  }
+  .latest-posts-white-space__cta-link-arrow{
+    width: 100px;
+  }
+  .staggered-text-columns-white-space .large-offset-1 {
+  margin-left: 1%;
+}
+  .staggered-text-columns-white-space .large-offset-2 {
+  margin-left: 1%;
+}
+  .home-page-hero-with-login .img-background {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+  position: inherit;
+  top: 0;
+  width: 100%;
+}
+    .home-page-hero-with-login__content {
+    margin: 0 auto;
+    max-width: 650px;
+  }
+}
+
+.log-f-c {
+    width: 100%;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-right: 24px;
+}
+
+.img-background-pop-up {
+  height: unset;
+}
+
+#gform_7 .fh-img-and-lg-txt,
+#gform_5 .fh-img-and-lg-txt {
+    height: 375px;
+    min-height: 200px;
+    padding: 30px 0 0 0;
+    font-weight: 600;
+}
+
+#gform_7 .fh-img-and-lg-txt__content,
+#gform_5 .fh-img-and-lg-txt__content {
+    height: unset;
+}
+
+.log-f-c h1 {
+    font-family: 'GT Sectra';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.log-f-c-center {
+    text-align: center;
+    font-weight: 500;
+}
+
+.log-f-c-center a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.popup-register-page {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 0 0 30px 0;
+    text-decoration: none;
+    font-family: 'GT Sectra';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    color: #000000;
+}
+
+.popup-form-download {
+    margin-top: 20%;
+}
+
+.popup-form-right {
+    font-family: 'GT Sectra';
+    font-style: normal;
+    font-weight: 400;
+    margin: 0 0 0 40px;
+    padding: 0;
+    height: 460px;
+    color: #000;
+}
+
+.popup-form-right a {
+    color: black;
+    text-decoration: underline;
+    display: inline;
+}
+
+.popup-mandatory-text {
+    margin-top: 10px;
+}
+
+.popup-form-login {
+  font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0 !important;
+}
+.popup-form-regin a {
+    font-weight: 600;
+}
+.line-middle {
+    display: flex;
+    flex-direction: row;
+    font-style: italic;
+    padding: 20px 0 20px 0;
+}
+
+.line-middle:before, .line-middle:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid;
+    margin: auto;
+}
+
+.line-middle:before {
+    margin-right: 10px
+}
+
+.line-middle:after {
+    margin-left: 10px
+}
+
+.middle-text {
+    text-align: center;
+}
+
+.notf-first-name-field input,
+.notf-last-name-field input,
+.popup-first-name-field input,
+.popup-last-name-field input {
+    width: 360px !important;
+    margin: 10px 0 !important;
+}
+
+.notf-email input,
+.popup-email input {
+    width: 360px !important;
+    margin-top: 10px !important;
+}
+
+.notf-submit .gform_button,
+.popup-submit .gform_button {
+    background: #000;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 48px;
+    margin-bottom: 0;
+    padding: 10px 30px;
+    text-transform: capitalize;
+}
+
+.notf-first-name-field,
+.notf-last-name-field,
+.notf-business-email-field,
+.popup-first-name-field,
+.popup-last-name-field,
+.popup-business-email-field {
+  justify-content: left !important;
+  width: 200% !important;
+}
+
+#gform_fields_7 .gfield_html_formatted,
+#gform_fields_5 .gfield_html_formatted  {
+    margin-left: unset !important;
+}
+
+#gform_7 .login_img_txt,
+#gform_5 .login_img_txt{
+  max-height: 200px;
+}
+
+.report-notf-success{
+  display: none;
+}
+
+.report-notf-icon svg{
+  width: 65px;
+  height: auto;
+}
+
+.report-notf-description{
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-top: 16px;
+}
+
+.report-notf-icon{
+  margin-bottom: 16px;
+  width: 35px;
+}
+
+.report-notf-title{
+  font-family: "GT Sectra Medium", serif;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+.report-notf-link-text {
+  /* border-bottom: 1px solid; */
+  display: inline-block;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.report-notf_cta-link-arrow{
+ 
+    bottom: -8px;
+    display: flex;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    transition: width .3s ease-out;
+    width: 100px;
+}
+
+.report-notf_cta-link-arrow::before{
+ 
+    content: "";
+    height: 2px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+    width: 100%;
+
+    background: #000;
+}
+
+#gform_wrapper_5,
+#gform_wrapper_7{
+  max-width: 925px;
+  overflow: hidden;
+}
+
+
+#gform_wrapper_1 .gform_footer{
+  display: block !important;
+}

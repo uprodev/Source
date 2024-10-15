@@ -1,0 +1,188 @@
+.quotes {
+	padding: 64px 0;
+
+	@include breakpoint(large) {
+		padding: 80px 0;
+	}
+
+	@include breakpoint(xlarge) {
+		padding: 100px 0;
+	}
+
+	&--purple {
+		.quotes__slide-quote-marks {
+			svg {
+				path {
+					fill: $colour_purple;
+				}
+			}
+		}
+	}
+
+	&--red {
+		.quotes__slide-quote-marks {
+			svg {
+				path {
+					fill: $colour_red;
+				}
+			}
+		}
+	}
+
+	&--yellow {
+		.quotes__slide-quote-marks {
+			svg {
+				path {
+					fill: $colour_yellow;
+				}
+			}
+		}
+	}
+
+	&--green {
+		.quotes__slide-quote-marks {
+			svg {
+				path {
+					fill: $colour_green;
+				}
+			}
+		}
+	}
+
+	&--blue {
+		.quotes__slide-quote-marks {
+			svg {
+				path {
+					fill: $colour_blue;
+				}
+			}
+		}
+	}
+
+	&__slide {
+		&-fig {
+			margin: 0;
+			max-width: 650px;
+			padding: 0;
+
+			@include breakpoint(large) {
+				max-width: 100%;
+			}
+		}
+
+		&-quote-marks {
+			margin-bottom: 40px;
+			width: 114px;
+
+			@include breakpoint(large) {
+				margin-bottom: 60px;
+				width: 173px;
+			}
+
+			svg {
+				display: block;
+			}
+		}
+
+		&-quote {
+			font-family: $font_gt_sectra_medium;
+			@include fontSize(32px);
+			line-height: 1.25;
+			margin: 0;
+			padding: 0;
+
+			@include breakpoint(large) {
+				@include fontSize(42px);
+			}
+
+			@include breakpoint(xlarge) {
+				// @include fontSize(50px);
+				// line-height: 1.2;
+			}
+		}
+
+		&-attribution {
+			@include fontSize(18px);
+			margin-top: 32px;
+			line-height: 1.75;
+
+			@include breakpoint(large) {
+				@include fontSize(20px);
+			}
+
+			@include breakpoint(xlarge) {
+				// @include fontSize(24px);
+				// margin-top: 23px;
+			}
+		}
+	}
+
+	&__controls-cell {
+		@include breakpoint(large) {
+			align-items: flex-end;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+	}
+
+	&__swiper-controls {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 32px;
+		width: 72px;
+
+		@include breakpoint(large) {
+			margin-top: 34px;
+			width: 105px;
+		}
+
+		&-control {
+			cursor: pointer;
+			width: 14px;
+
+			@include breakpoint(large) {
+				width: 19px;
+			}
+
+			&-icon {
+				svg {
+					display: block;
+
+					path {
+						fill: $colour_black;
+					}
+				}
+			}
+
+			&.swiper-button-disabled {
+				opacity: .3;
+			}
+		}
+	}
+
+	&__swiper-pagination {
+		display: flex;
+		flex-wrap: wrap;
+		margin-right: 20px;
+		margin-top: 34px;
+
+		.swiper-pagination-bullet {
+			background: transparent;
+			border-radius: 0;
+			border-bottom: 2px solid;
+			margin: 0 20px 0 0;
+			padding: 20px 0 0 0;
+			width: 90px;
+
+			@include breakpoint(xlarge) {
+				width: 126px;
+			}
+
+			&:focus-visible {
+				outline-offset: 6px;
+				outline: 2px solid black;
+			}
+		}
+	}
+}

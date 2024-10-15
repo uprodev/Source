@@ -1,0 +1,134 @@
+.meet-our-people {
+	padding: 64px 0;
+
+	@include breakpoint(large) {
+		padding: 80px 0 145px;
+	}
+
+	&__intro {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__title {
+		font-family: $font_gt_sectra_medium;
+		@include fontSize(32px);
+		line-height: 1.25;
+
+		@include breakpoint(large) {
+			@include fontSize(40px);
+		}
+	}
+
+	&__title + &__description {
+		margin-top: 32px;
+
+		@include breakpoint(large) {
+			margin-top: 48px;
+		}
+	}
+
+	&__description {
+		@include fontSize(20px);
+		line-height: 1.6;
+		max-width: 600px;
+
+		@include breakpoint(large) {
+			@include fontSize(24px);
+			max-width: 800px;
+		}
+	}
+
+	&__description + &__link {
+		margin-top: 32px;
+
+		@include breakpoint(large) {
+			margin-top: 106px;
+		}
+	}
+
+	&__images {
+		margin-top: 62px;
+
+		@include breakpoint(large) {
+			margin-top: -5%;
+		}
+
+		@include breakpoint(xlarge) {
+			// margin-top: -3.5%;
+		}
+	}
+
+	&__image {
+		&-secondary {
+			&-wrap {
+				@include aspectBox(206, 143);
+				margin-left: auto;
+				margin-right: 10%;
+				max-width: 550px;
+				position: relative;
+				width: 72%;
+
+				@include breakpoint(large) {
+					max-width: 100%;
+					width: 100%;
+				}
+			}
+		}
+
+		&-secondary + &-primary {
+			margin-top: -11%;
+
+			@include breakpoint(large) {
+				margin-top: -12%;
+			}
+
+			@include breakpoint(xlarge) {
+				// margin-top: -10%;
+			}
+		}
+
+		&-primary {
+			&-wrap {
+				@include aspectBox(236, 147);
+				position: relative;
+				max-width: 600px;
+				width: 80%;
+				z-index: 10;
+
+				@include breakpoint(large) {
+					max-width: 100%;
+					width: 100%;
+				}
+			}
+		}
+
+		&-primary + &-tertiary {
+			margin-top: -8%;
+
+			@include breakpoint(large) {
+				margin-top: -6.5%;
+			}
+
+			@include breakpoint(xlarge) {
+				margin-top: -5%;
+			}
+		}
+
+		&-tertiary {
+			&-wrap {
+				@include aspectBox(238, 159);
+				margin-left: auto;
+				margin-right: 2%;
+				max-width: 575px;
+				position: relative;
+				width: 83%;
+
+				@include breakpoint(large) {
+					max-width: 100%;
+					width: 100%;
+				}
+			}
+		}
+	}
+}

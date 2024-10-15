@@ -1,0 +1,132 @@
+.hot-topics {
+	overflow: hidden;
+	padding: 64px 0;
+
+	@include breakpoint(large) {
+		padding: 80px 0;
+	}
+
+	&__head {
+		margin-bottom: 32px;
+
+		@include breakpoint(large) {
+			margin-bottom: 74px;
+		}
+	}
+
+	&__title {
+		color: $colour_red;
+		font-family: $font_gt_sectra_medium;
+		@include fontSize(28px);
+		line-height: 1.2;
+
+		@include breakpoint(medium) {
+			@include fontSize(32px);
+		}
+
+		@include breakpoint(large) {
+			// @include fontSize(40px);
+		}
+	}
+
+	&__sub-title {
+		color: $colour_black;
+		font-family: $font_gt_sectra_medium;
+		@include fontSize(28px);
+		line-height: 1.2;
+
+		@include breakpoint(medium) {
+			@include fontSize(32px);
+		}
+
+		@include breakpoint(large) {
+			// @include fontSize(40px);
+		}
+	}
+
+	&__swiper-container {
+		overflow: visible;
+	}
+
+	&__swiper-wrap {
+		position: relative;
+	}
+
+	&__swiper-controls-wrap {
+		@include breakpoint(large) {
+			bottom: 0;
+			position: absolute;
+			right: 0;
+			width: 41%;
+			z-index: 1;
+		}
+
+		@include breakpoint(xlarge) {
+			bottom: 0;
+			position: absolute;
+			right: 0;
+			width: 32.4%;
+			z-index: 1;
+		}
+	}
+
+	&__swiper-controls {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 30px;
+		width: 73px;
+
+		@include breakpoint(large) {
+			margin-top: 0;
+			width: 105px;
+		}
+
+		&-control-desktop,
+		&-control {
+			cursor: pointer;
+			width: 15px;
+
+			@include breakpoint(large) {
+				width: 20px;
+			}
+
+			svg {
+				display: flex;
+				width: 100%;
+
+				path {
+					fill: $colour_black;
+				}
+			}
+
+			&.swiper-button-disabled {
+				opacity: .3;
+			}
+		}
+	}
+
+	&__swiper-pagination {
+		display: flex;
+		margin-top: 54px;
+
+		.swiper-pagination-bullet {
+			background: $colour_black;
+			border-radius: 0;
+			height: 2px;
+			width: 48px;
+
+			@include breakpoint(xlarge) {
+				width: 63px;
+			}
+
+			&:focus-visible {
+				outline-offset: 6px;
+				outline: 2px solid black;
+			}
+		}
+
+		.swiper-pagination-bullet + .swiper-pagination-bullet {
+			margin: 0 0 0 10px;
+		}
+	}
+}

@@ -1,0 +1,151 @@
+.page-intro {
+	padding: 64px 0;
+
+	@include breakpoint(medium) {
+		padding: 80px 0;
+	}
+
+	@include breakpoint(large) {
+		padding: 80px 0 100px;
+	}
+
+	@include breakpoint(xlarge) {
+		padding: 100px 0 120px;
+	}
+
+	&--purple {
+		.page-intro__heading strong {
+			color: $colour_purple;
+		}
+	}
+
+	&--red {
+		.page-intro__heading strong {
+			color: $colour_red;
+		}
+	}
+
+	&--green {
+		.page-intro__heading strong {
+			color: $colour_green;
+		}
+	}
+
+	&--yellow {
+		.page-intro__heading strong {
+			color: $colour_yellow;
+		}
+	}
+
+	&--blue {
+		.page-intro__heading strong {
+			color: $colour_blue;
+		}
+	}
+
+	&--has-image {
+		.page-intro__intro {
+			@include breakpoint(xlarge) {
+				margin-top: 200px;
+			}
+		}
+	}
+
+	&__crumbs {
+		align-items: center;
+		@include fontSize(20px);
+		display: flex;
+		flex-wrap: wrap;;
+		font-weight: 500;
+		line-height: 1.4;
+		margin-bottom: 16px;
+
+		&-divider {
+			background: $colour_black;
+			height: 25px;
+			margin: 0 10px;
+			width: 2px;
+
+			@include breakpoint(large) {
+				height: 30px;
+			}
+		}
+	}
+
+	&__heading {
+		font-family: $font_gt_sectra_medium;
+		@include fontSize(32px);
+		line-height: 1.25;
+		max-width: 600px;
+
+		@include breakpoint(medium) {
+			@include fontSize(50px);
+		}
+
+		@include breakpoint(large) {
+			@include fontSize(72px);
+			max-width: 800px;
+		}
+
+		@include breakpoint(xlarge) {
+			// @include fontSize(80px);
+			max-width: 95%;
+		}
+
+		strong {
+			font-weight: normal;
+		}
+	}
+
+	&__intro {
+		@include fontSize(20px);
+		line-height: 1.6;
+		margin-top: 64px;
+		max-width: 600px;
+
+		@include breakpoint(large) {
+			@include fontSize(26px);
+			margin-top: 100px;
+			max-width: 95%;
+		}
+
+		@include breakpoint(xlarge) {
+			// @include fontSize(30px);
+			// margin-top: 247px;
+			max-width: 85%;
+		}
+
+		p:first-of-type {
+			font-weight: 500;
+		}
+
+		p + p {
+			margin-top: 10px;
+
+			@include breakpoint(large) {
+				margin-top: 18px;
+			}
+		}
+	}
+
+	&__image-wrap {
+		@include aspectBox(850, 840);
+		margin-top: 30px;
+		max-width: 450px;
+		position: relative;
+		width: 100%;
+
+		@include breakpoint(medium) {
+			margin-top: 40px;
+		}
+
+		@include breakpoint(large) {
+			margin-top: 64px;
+			max-width: 100%;
+		}
+
+		@include breakpoint(xlarge) {
+			// margin-top: 128px;
+		}
+	}
+}

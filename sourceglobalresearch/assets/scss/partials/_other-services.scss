@@ -1,0 +1,58 @@
+.other-services {
+	padding: 64px 0;
+
+	@include breakpoint(large) {
+		padding: 80px 0;
+	}
+
+	&__title {
+		font-family: $font_gt_sectra_medium;
+		@include fontSize(32px);
+		line-height: 1.55;
+		margin-bottom: 34px;
+
+		@include breakpoint(large) {
+			@include fontSize(40px);
+			line-height: 1.35;
+			margin-bottom: 100px;
+		}
+
+		@include breakpoint(xlarge) {
+			// @include fontSize(50px);
+			// margin-bottom: 184px;
+		}
+	}
+
+	&__cell + &__cell {
+		margin-top: 64px;
+
+		@include breakpoint(large) {
+			margin-top: 0;
+		}
+	}
+
+	&__cell--1 {
+		@include breakpoint(medium) {
+			margin-top: 0 !important;
+		}
+	}
+
+	&__service {
+		&-title {
+			font-family: $font_gt_sectra_medium;
+			@include fontSize(32px);
+			line-height: 1.55;
+			margin-bottom: 24px;
+
+			@include breakpoint(large) {
+				@include fontSize(40px);
+				line-height: 1.35;
+				margin-bottom: 44px;
+			}
+
+			@include breakpoint(xlarge) {
+				// @include fontSize(50px);
+			}
+		}
+	}
+}

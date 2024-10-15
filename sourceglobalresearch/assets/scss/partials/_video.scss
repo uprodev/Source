@@ -1,0 +1,122 @@
+.background-video {
+	&__video-wrap {
+		bottom: 0;
+		left: 0;
+		overflow: hidden;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	&__video {
+		height: auto;
+		left: 50%;
+		min-width: 100%;
+		min-height: 100%;
+		object-fit: cover;
+		position: absolute;
+		top: 50%;
+		transform: translate3d(-50%, -50%, 0);
+		width: 100%;
+	}
+}
+
+.video {
+	overflow: hidden;
+}
+
+.video__play {
+	cursor: pointer;
+	left: 50%;
+	opacity: 1;
+	outline: none;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: opacity .2s ease-in-out;
+	width: 60px;
+
+	@include breakpoint(medium) {
+		width: 70px;
+	}
+
+	@include breakpoint(large) {
+		width: 100px;
+	}
+
+	@include breakpoint(xlarge) {
+		width: 130px;
+	}
+
+	@include breakpoint(xxlarge) {
+		width: 161px;
+	}
+
+	&:focus,
+	&:hover {
+		path,
+		circle {
+			opacity: 1;
+		}
+	}
+
+	svg {
+		display: block;
+
+		path,
+		circle {
+			transition: opacity .2s ease-in-out;
+		}
+	}
+}
+
+.video__container {
+	padding-top: 56%;
+	position: relative;
+}
+
+.video__image {
+	height: 100%;
+	left: 0;
+	object-fit: cover;
+	object-position: center;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.video__container--placeholder {
+	.video__iframe {
+		opacity: 0;
+		pointer-events: none;
+		transition: all 1s ease-in-out;
+	}
+}
+
+.video__container--self-size {
+	&:after {
+		content: none;
+	}
+}
+
+.video__iframe {
+	left: 0;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	width: 100%;
+
+	iframe {
+		bottom: -1px;
+		left: -1px;
+		height: calc(100% + 2px);
+		position: absolute;
+		right: -1px;
+		top: -1px;
+		width: calc(100% + 2px);
+	}
+
+	.player {
+		background: black;
+	}
+}

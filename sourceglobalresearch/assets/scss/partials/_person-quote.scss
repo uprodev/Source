@@ -1,0 +1,102 @@
+.person-quote {
+	padding: 64px 0;
+
+	@include breakpoint(large) {
+		padding: 80px 0;
+	}
+
+	@include breakpoint(xlarge) {
+		padding: 100px 0;
+	}
+
+	&--purple {
+		.person-quote__quote-marks {
+			svg {
+				path {
+					fill: $colour_purple;
+				}
+			}
+		}
+	}
+
+	&--red {
+		.person-quote__quote-marks {
+			svg {
+				path {
+					fill: $colour_red;
+				}
+			}
+		}
+	}
+
+	&--blue {
+		.person-quote__quote-marks {
+			svg {
+				path {
+					fill: $colour_blue;
+				}
+			}
+		}
+	}
+
+	&--green {
+		.person-quote__quote-marks {
+			svg {
+				path {
+					fill: $colour_green;
+				}
+			}
+		}
+	}
+
+	&--yellow {
+		.person-quote__quote-marks {
+			svg {
+				path {
+					fill: $colour_yellow;
+				}
+			}
+		}
+	}
+
+	&__fig {
+		margin: 0;
+		max-width: 650px;
+		padding: 0;
+
+		@include breakpoint(large) {
+			max-width: 100%;
+		}
+	}
+
+	&__quote-marks {
+		margin-bottom: 40px;
+		width: 114px;
+
+		@include breakpoint(large) {
+			margin-bottom: 60px;
+			width: 173px;
+		}
+
+		svg {
+			display: block;
+		}
+	}
+
+	&__quote {
+		font-family: $font_gt_sectra_medium;
+		@include fontSize(32px);
+		line-height: 1.25;
+		margin: 0;
+		padding: 0;
+
+		@include breakpoint(large) {
+			@include fontSize(42px);
+		}
+
+		@include breakpoint(xlarge) {
+			// @include fontSize(50px);
+			line-height: 1.2;
+		}
+	}
+}

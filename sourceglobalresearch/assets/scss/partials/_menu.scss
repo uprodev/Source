@@ -1,0 +1,47 @@
+.menu {
+	background: $colour_white;
+	color: $colour_black;
+	left: 0;
+	padding: 50px 0 0 0;
+	position: absolute;
+	height: calc(100vh - 104px);
+	top: 104px;
+	transform: translate3d(0, -100%, 0);
+	transition: transform .3s ease-in-out;
+	width: 100%;
+
+	@include breakpoint(large) {
+		display: none;
+	}
+
+	&.open {
+		transform: translate3d(0, 0, 0);
+	}
+
+	&__list {
+		&-item {
+			@include fontSize(22px);
+			font-weight: 500;
+			line-height: 1.2;
+
+			&-link {
+				align-items: center;
+				display: flex;
+
+				&-arrow {
+					margin-left: 16px;
+					flex-shrink: 0;
+					width: 50px;
+
+					svg {
+						display: block;
+					}
+				}
+			}
+		}
+
+		&-item + &-item {
+			margin-top: 32px;
+		}
+	}
+}

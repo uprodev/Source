@@ -1,0 +1,66 @@
+.people-list {
+	padding: 64px 0 32px 0;
+
+	@include breakpoint(large) {
+		padding: 80px 0 0 0;
+	}
+
+	@include breakpoint(xlarge) {
+		padding: 80px 0 60px 0;
+	}
+
+	&__title {
+		font-family: $font_gt_sectra_medium;
+		@include fontSize(32px);
+		line-height: 1.25;
+		margin-bottom: 32px;
+
+		@include breakpoint(large) {
+			@include fontSize(40px);
+			margin-bottom: 60px;
+		}
+
+		@include breakpoint(xlarge) {
+			// margin-bottom: 90px;
+		}
+	}
+
+	&__cards {
+		.cell {
+			margin-bottom: 32px;
+
+			@include breakpoint(medium) {
+				margin-bottom: 60px;
+			}
+
+			@include breakpoint(large) {
+				margin-bottom: 88px;
+			}
+
+			&:nth-of-type(2n) {
+				.person-card {
+					margin-left: auto;
+				}
+			}
+		}
+	}
+
+	.person-card {
+		max-width: 320px;
+
+		@include breakpoint(medium) {
+			max-width: 95%;
+		}
+
+		@include breakpoint(large) {
+			max-width: 100%;
+		}
+
+		.person-card__image {
+			@include breakpoint(large) {
+				@include aspectBox(227, 324);
+				height: auto;
+			}
+		}
+	}
+}

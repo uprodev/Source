@@ -1,0 +1,34 @@
+.two-column-text {
+	padding: 64px 0;
+
+	@include breakpoint(large) {
+		padding: 76px 0;
+	}
+
+	&__heading {
+		font-family: $font_gt_sectra_medium;
+		@include fontSize(32px);
+		line-height: 1.25;
+		margin-bottom: 24px;
+
+		@include breakpoint(large) {
+			@include fontSize(40px);
+			margin-bottom: 0;
+		}
+	}
+
+	&__content {
+		@include fontSize(24px);
+		line-height: 1.5;
+		margin-bottom: 32px;
+
+		@include breakpoint(large) {
+			@include fontSize(28px);
+			margin-bottom: 40px;
+		}
+
+		* + * {
+			margin-top: 1.5rem;
+		}
+	}
+}

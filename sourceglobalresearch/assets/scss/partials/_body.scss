@@ -1,0 +1,86 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: $colour_black;
+	color: $colour_white;
+	font-family: $font_work_sans;
+	font-weight: 400;
+	// Please note that when you are using `grid-margin-x` on a `grid-container` with `full` class you will also need to hide the horizontal overflow in order for this to work correctly if your content is going to touch the sides of the viewport.
+	// The best way to do this is:  `body {overflow-x: hidden;}`
+	overflow-x: hidden;
+}
+
+strong em,
+strong b {
+	font-style: normal;
+	font-weight: 500;
+}
+
+strong,
+b {
+	font-weight: 500;
+}
+
+.skip-to-content {
+	align-items: center;
+	background: $colour_black;
+	box-shadow: inset 0 0 0 2px $colour_black;
+	color: $colour_white;
+	display: flex;
+	@include fontSize(22px);
+	font-weight: 500;
+	justify-content: center;
+	line-height: 1;
+	left: -225px;
+	outline: none;
+	padding: 15px 20px;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	transition: left .2s ease-in-out 0s;
+
+	&:focus {
+		left: 0;
+	}
+}
+
+.grid-container {
+	padding: 0 24px;
+
+	@include breakpoint(large) {
+		padding: 0;
+	}
+}
+
+main.content {
+	background: $colour_white;
+	color: $colour_black;
+	padding-top: 104px;
+	position: relative;
+
+	@include breakpoint(large) {
+		padding-top: 114px;
+	}
+
+	@include breakpoint(xlarge) {
+		padding-top: 125px;
+	}
+}
+
+.content-cover {
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transition: all .2s ease-out;
+	visibility: hidden;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+}

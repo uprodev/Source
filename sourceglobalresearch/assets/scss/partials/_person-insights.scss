@@ -1,0 +1,15 @@
+.person-insights {
+	padding-bottom: 64px;
+
+	@include breakpoint(medium) {
+		padding-bottom: 80px;
+	}
+
+	@include breakpoint(large) {
+		padding-bottom: 100px;
+	}
+
+	@include breakpoint(xlarge) {
+		padding-bottom: 140px;
+	}
+}

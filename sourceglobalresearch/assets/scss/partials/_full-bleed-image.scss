@@ -1,0 +1,14 @@
+.full-bleed-image {
+	&__image {
+		@include aspectBox(320, 572);
+		position: relative;
+
+		@include breakpoint(medium) {
+			@include aspectBox(1, 1);
+		}
+
+		@include breakpoint(large) {
+			@include aspectBox(1680, 1056);
+		}
+	}
+}
