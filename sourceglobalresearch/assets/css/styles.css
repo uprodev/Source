@@ -1,0 +1,508 @@
+/*------------------------------NEW-BLOCKS------------------------------*/
+.about-new {
+  padding: 107px 0;
+  background: #fff;
+  color: #000; }
+  .about-new .content {
+    width: 100%;
+    max-width: 100%;
+    margin: auto; }
+  .about-new .text {
+    width: 41%;
+    padding-top: 41px; }
+    .about-new .text p {
+      color: black;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 38px;
+      letter-spacing: 0;
+      text-align: left; }
+    .about-new .text .arrow-link {
+      margin-top: 40px; }
+  .about-new figure {
+    width: 50%;
+    margin: 0; }
+    .about-new figure img {
+      width: 100%;
+      height: auto; }
+  .about-new .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 95px; }
+  .about-new .item:nth-child(2n) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse; }
+    .about-new .item:nth-child(2n) figure {
+      position: relative;
+      left: -10px; }
+  .about-new .item:last-child {
+    margin-bottom: 0; }
+  .about-new .cell {
+    margin: auto;
+    padding: 0; }
+  .about-new .title {
+    color: black;
+    font-family: "GT Sectra Medium", serif;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 52px;
+    letter-spacing: 0;
+    text-align: left;
+    margin-bottom: 48px; }
+  .about-new .arrow-link__inner {
+    height: 57px; }
+  .about-new .arrow-link__arrow {
+    width: 125px; }
+
+.meet-our-people-new {
+  background: #fff;
+  color: #000; }
+  .meet-our-people-new .meet-our-people__title {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 60px; }
+  .meet-our-people-new .meet-our-people__title + .meet-our-people__description {
+    margin-top: 56px;
+    width: 95%;
+    max-width: 100%; }
+  .meet-our-people-new .meet-our-people__description + .meet-our-people__link {
+    margin-top: 70px; }
+  .meet-our-people-new .arrow-link__inner {
+    height: 90px; }
+  .meet-our-people-new .arrow-link__arrow {
+    width: 308px; }
+  .meet-our-people-new .meet-our-people__images {
+    margin-top: -4%; }
+  .meet-our-people-new .meet-our-people__image-primary + .meet-our-people__image-tertiary {
+    z-index: 10;
+    position: relative; }
+
+.hero-page-4x {
+  background: #fff;
+  color: #000;
+  margin: 0; }
+  .hero-page-4x .insights-hero__crumbs-current {
+    color: black;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: normal; }
+  .hero-page-4x .insights-hero__crumbs {
+    margin-bottom: 50px; }
+  .hero-page-4x .insights-hero__heading {
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 64px;
+    margin-bottom: 105px; }
+    .hero-page-4x .insights-hero__heading strong {
+      color: #00f07c; }
+  .hero-page-4x .insights-hero__content p {
+    color: black;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 41.6px;
+    letter-spacing: 0;
+    text-align: left; }
+  .hero-page-4x .insights-hero__image-wrap {
+    margin: 0; }
+  .hero-page-4x .text {
+    width: 44%;
+    padding-left: 5.2%; }
+  .hero-page-4x .img-wrap {
+    width: 55%; }
+    .hero-page-4x .img-wrap img {
+      width: 100%; }
+  .hero-page-4x .content {
+    width: 1600px;
+    max-width: 100%;
+    margin: auto !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .hero-page-4x .insights-hero__content {
+    padding: 82px 0 0; }
+
+.number-info {
+  padding: 35px 0 100px;
+  background: #fff;
+  color: #000; }
+  .number-info .cell.large-12 {
+    margin: auto; }
+  .number-info .content {
+    margin: auto !important;
+    width: 1440px;
+    max-width: 100%; }
+  .number-info .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: 65px;
+    margin-bottom: 65px;
+    border-bottom: 2px solid #00f07c; }
+  .number-info .number-wrap {
+    width: 150px;
+    padding-left: 9px; }
+  .number-info .title-wrap {
+    width: calc(43% - 75px);
+    padding-right: 50px; }
+  .number-info .text-wrap {
+    width: calc(54% - 75px); }
+    .number-info .text-wrap p {
+      color: black;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 36px; }
+  .number-info .number {
+    color: black;
+    font-family: "GT Sectra Medium", serif;
+    font-size: 128px;
+    font-weight: 500;
+    line-height: 72px;
+    letter-spacing: 0;
+    text-align: left;
+    position: relative;
+    top: -15px; }
+  .number-info .title {
+    font-family: "GT Sectra Medium", serif;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0;
+    text-align: left;
+    margin: 0 !important; }
+    .number-info .title strong {
+      color: #00f07c; }
+  .number-info .item:last-child {
+    border-bottom: 0;
+    margin: 0;
+    padding: 0; }
+
+.service-item-2x {
+  padding: 117px 0 100px;
+  background: #fff;
+  color: #000; }
+  .service-item-2x .cell.large-12 {
+    margin: auto; }
+  .service-item-2x .content {
+    margin: auto !important;
+    width: 1440px;
+    max-width: 100%; }
+  .service-item-2x .title {
+    color: black;
+    font-family: "GT Sectra Medium", serif;
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 72px;
+    margin: 0 0 70px; }
+  .service-item-2x .wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%; }
+  .service-item-2x .item {
+    position: relative;
+    width: 638px;
+    border: 1px solid rgba(0, 0, 0, 0.5); }
+    .service-item-2x .item figure {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      height: 441px;
+      background: #000;
+      margin: 0;
+      overflow: hidden; }
+      .service-item-2x .item figure img {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center;
+           object-position: center;
+        -webkit-transition: -webkit-transform .4s ease;
+        transition: -webkit-transform .4s ease;
+        transition: transform .4s ease;
+        transition: transform .4s ease, -webkit-transform .4s ease; }
+    .service-item-2x .item .text {
+      padding: 57px 54px 70px; }
+    .service-item-2x .item .title-info {
+      margin: 0 0 30px;
+      color: black;
+      font-family: "GT Sectra Medium", serif;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 36px; }
+    .service-item-2x .item p {
+      color: black;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 38px; }
+    .service-item-2x .item:hover figure img {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px); }
+  .service-item-2x .whats-new-card__cta {
+    margin-top: 29px; }
+  .service-item-2x .arrow-link__arrow {
+    -webkit-filter: invert(1);
+            filter: invert(1);
+    width: 202px; }
+  .service-item-2x .arrow-link:hover .arrow-link__arrow {
+    width: 230px; }
+
+.hero-page-4x.color-violet .insights-hero__heading strong {
+  color: #a600ff; }
+
+.number-info.color-violet .title strong {
+  color: #a600ff; }
+.number-info.color-violet .item {
+  border-color: #a600ff; }
+
+.hero-page-4x.color-turquoise .insights-hero__heading strong {
+  color: #00dede; }
+.hero-page-4x.color-turquoise .img-background-contain {
+  -o-object-position: top right;
+     object-position: top right; }
+
+.number-info.color-turquoise .title strong {
+  color: #00dede; }
+.number-info.color-turquoise .item {
+  border-color: #00dede; }
+
+.latest-posts .cell.large-12 {
+  margin: auto; }
+.latest-posts .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  z-index: 100;
+  width: 1405px;
+  max-width: 100%;
+  margin: 170px auto 0; }
+.latest-posts .title {
+  width: calc(100% - 285px);
+  margin: 0;
+  color: white;
+  font-family: "GT Sectra Medium", serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 50px;
+  padding-left: 20px; }
+.latest-posts .btn-wrap {
+  width: 265px;
+  border: 1px solid #fff;
+  border-left: 15px solid #fff;
+  height: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative; }
+  .latest-posts .btn-wrap a {
+    padding-left: 23px; }
+    .latest-posts .btn-wrap a:after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 100%; }
+    .latest-posts .btn-wrap a .arrow-link__text {
+      font-size: 24px; }
+
+@media (max-width: 1500px) {
+  .latest-posts .title {
+    padding: 0; }
+
+  .service-item-2x .item {
+    width: 48%; } }
+@media (max-width: 1023px) {
+  .about-new .item, .about-new .item:nth-child(2n) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; }
+
+  .about-new figure {
+    width: 100%; }
+
+  .about-new .text {
+    width: 100%; }
+
+  .about-new .text p {
+    font-size: 18px;
+    line-height: 30px; }
+
+  .about-new .title, .service-item-2x .title {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 25px; }
+
+  .about-new .text .arrow-link {
+    margin-top: 20px; }
+
+  .about-new .item:nth-child(2n) figure {
+    left: 0; }
+
+  .latest-posts .content {
+    margin-top: 80px; }
+
+  .latest-posts .title {
+    font-size: 32px;
+    line-height: 38px; }
+
+  .latest-posts .btn-wrap {
+    width: 240px;
+    height: 80px; }
+
+  .meet-our-people-new .meet-our-people__title {
+    font-size: 32px;
+    line-height: 38px; }
+
+  .meet-our-people-new .meet-our-people__title + .meet-our-people__description {
+    margin-top: 25px; }
+
+  .meet-our-people-new .meet-our-people__description + .meet-our-people__link {
+    margin-top: 30px; }
+
+  .meet-our-people-new .arrow-link__inner {
+    height: 55px; }
+
+  .hero-page-4x .text {
+    padding-left: 5px;
+    width: 100%; }
+
+  .hero-page-4x .img-wrap {
+    width: 100%; }
+
+  .hero-page-4x .insights-hero__heading {
+    font-size: 50px;
+    line-height: 62px;
+    margin-bottom: 30px; }
+
+  .hero-page-4x .insights-hero__crumbs-current {
+    font-size: 20px; }
+
+  .hero-page-4x .insights-hero__crumbs {
+    margin-bottom: 20px; }
+
+  .hero-page-4x .insights-hero__content p {
+    font-size: 20px;
+    line-height: 30px; }
+
+  .number-info .item {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-width: 1px; }
+
+  .number-info .number-wrap {
+    padding: 0;
+    width: 50px; }
+
+  .number-info .number {
+    font-size: 70px;
+    line-height: 1; }
+
+  .number-info .title-wrap {
+    width: calc(100% - 75px);
+    padding: 0;
+    margin-bottom: 15px; }
+
+  .number-info .title {
+    font-size: 28px;
+    line-height: 34px; }
+
+  .number-info .text-wrap {
+    width: 100%;
+    padding-left: 75px; }
+
+  .number-info .text-wrap p {
+    font-size: 18px;
+    line-height: 24px; }
+
+  .number-info {
+    padding: 35px 0 50px; }
+
+  .service-item-2x {
+    padding: 50px 0; }
+
+  .service-item-2x .item figure {
+    height: 250px; }
+
+  .service-item-2x .item .text {
+    padding: 20px 15px 30px; }
+
+  .service-item-2x .item .title-info {
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 15px; }
+
+  .service-item-2x .item p {
+    font-size: 18px;
+    line-height: 1.3; }
+
+  .about-new {
+    padding: 50px 0; } }
+@media (max-width: 599px) {
+  .latest-posts .title {
+    width: 100%;
+    margin-bottom: 20px; }
+
+  .hero-page-4x .insights-hero__heading {
+    font-size: 32px;
+    line-height: 40px; }
+
+  .number-info .number-wrap {
+    width: 30px; }
+
+  .number-info .number {
+    font-size: 50px; }
+
+  .number-info .title-wrap {
+    width: calc(100% - 40px); }
+
+  .number-info .text-wrap {
+    padding-left: 40px; }
+
+  .service-item-2x .item {
+    width: 100%; }
+
+  .service-item-2x .wrap {
+    grid-gap: 25px; } }
+/*--------------------------------END-NEW-BLOCKS----------------------------------*/
+
+/*# sourceMappingURL=styles.css.map */

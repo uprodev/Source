@@ -4361,3 +4361,74 @@ function brand_insights_white_space($id, $block, $number)
 }
 
 
+/**
+ * About
+ * @param int $id
+ * @param int $block
+ * @param int $number
+ * @return string
+ */
+function about($id, $block, $number){
+    $bc = 'about';
+    //$list = get_post_meta($id, 'flexible_blocks_' . $block . '_about_items', true);
+    $flexible_content = get_field('flexible_blocks');
+    foreach ($flexible_content as $layout) {
+        if ($layout['acf_fc_layout'] === 'about') {
+            $list = $layout['about_items'];
+        }
+    }
+
+    if($list):?>
+
+        <section class="about-ctas about-new">
+            <div class="grid-container">
+                <div class="grid-x grid-padding-x">
+                    <!--fade-in-up-->
+                    <div class="cell large-12">
+                        <div class="content">
+                            <?php foreach($list as $li):
+                                $link = $li['link'];
+                                $image = $li['image'];?>
+                                <div class="item">
+                                    <div class="text">
+                                        <?php if($li['title']):?>
+                                            <h2 class="title"><?= $li['title'];?></h2>
+                                        <?php endif;?>
+                                        <?php if($li['text']):?>
+                                            <p><?= $li['text'];?></p>
+                                        <?php endif;?>
+
+                                        <?php if( $link ):
+                                            $link_url = $link['url'];
+                                            $link_title = $link['title'];
+                                            $link_target = $link['target'] ? $link['target'] : '_self';
+                                            ?>
+                                            <a class="arrow-link  arrow-link--dark about-ctas__cta-link" href="<?= esc_url($link_url); ?>" target="<?= esc_attr($link_target); ?>">
+                                                <span class="arrow-link__inner">
+                                                    <span class="arrow-link__text about-ctas__cta-link-text"><?= esc_html($link_title); ?></span>
+                                                    <span class="arrow-link__arrow about-ctas__cta-link-arrow">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 14.728">
+                                                            <path id="arrow" class="arrow" d="M177.707 8.071a.999.999 0 0 0 0-1.414L171.343.293a.999.999 0 1 0-1.414 1.414l5.657 5.657-5.657 5.657a.999.999 0 1 0 1.414 1.414l6.364-6.364Z" fill="#fff"></path><path id="line" class="line" d="M0 6.364h177v2H0z" fill="#fill"></path>
+                                                        </svg>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        <?php endif; ?>
+                                    </div>
+                                    <?php if($image):?>
+                                        <figure>
+                                            <img src="<?= $image['url'];?>" alt="<?= $image['alt'];?>">
+                                        </figure>
+                                    <?php endif;?>
+                                </div>
+                            <?php endforeach;?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<?php endif;
+
+}
+
