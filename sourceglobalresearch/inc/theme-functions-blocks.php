@@ -4476,3 +4476,58 @@ function about($id, $block, $number){
     }
 }
 
+
+/**
+ * Page Hero
+ * @param int $id
+ * @param int $block
+ * @param int $number
+ * @return string
+ */
+function page_hero($id, $block, $number)
+{
+    $bc = 'page-hero';
+    $title = get_post_meta($id, 'flexible_blocks_' . $block . '_title', true);
+    $text = get_post_meta($id, 'flexible_blocks_' . $block . '_text', true);
+    $subtitle = get_post_meta($id, 'flexible_blocks_' . $block . '_subtitle', true);
+    $image_id = get_post_meta($id, 'flexible_blocks_' . $block . '_image', true);
+    $image = wp_get_attachment_image($image_id, 'size', false, ['class' => 'img-background-contain']);
+
+    $o = '<section class="insights-hero insights-hero--purple hero-page-4x">';
+    $o .= '<div class="grid-container">';
+    $o .= '<div class="grid-x grid-padding-x content">';
+    $o .= '<div class="cell text">';
+    $o .= '<div class="insights-hero__content">';
+
+    if ($subtitle) {
+        $o .= '<div class="insights-hero__crumbs">';
+        $o .= '<span class="insights-hero__crumbs-current">' . $subtitle . '</span>';
+        $o .= '</div>';
+    }
+
+    if ($title) {
+        $o .= '<h1 class="insights-hero__heading">' . $title . '</h1>';
+    }
+
+    if ($text) {
+        $o .= wpautop($text);
+    }
+
+    $o .= '</div>';
+    $o .= '</div>';
+    $o .= '<div class="cell img-wrap">';
+    $o .= '<div class="insights-hero__image-wrap">';
+
+    if ($image){
+        $o .= '<figure class="insights-hero__image">';
+        $o .= $image;
+        $o .= '</figure>';
+    }
+    $o .= '</div>';
+    $o .= '</div>';
+    $o .= '</div>';
+    $o .= '</div>';
+    $o .= '</section>';
+
+    return $o;
+}
