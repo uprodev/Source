@@ -1100,6 +1100,7 @@ function single_featured_post($id, $block, $number)
 function meet_our_people($id, $block, $number)
 {
 	$bc = 'meet-our-people';
+    $style = get_post_meta($id, 'flexible_blocks_' . $block . '_use_new_style', true);
 	$title = get_post_meta($id, 'flexible_blocks_' . $block . '_title', true);
 	$description = get_post_meta($id, 'flexible_blocks_' . $block . '_description', true);
 	$link = get_post_meta($id, 'flexible_blocks_' . $block . '_link', true);
@@ -1109,7 +1110,13 @@ function meet_our_people($id, $block, $number)
 	$primary_image = wp_get_attachment_image($image_1, 'size', false, ['class' => 'img-background']);
 	$secondary_image = wp_get_attachment_image($image_2, 'size', false, ['class' => 'img-background']);
 	$tertiary_image = wp_get_attachment_image($image_3, 'size', false, ['class' => 'img-background']);
-	$o = '<section class="' . $bc . '">';
+
+	if($style){
+	    $ns = ' meet-our-people-new';
+    }else{
+	    $ns = '';
+    }
+	$o = '<section class="' . $bc . $ns . '">';
 	$o .= '<div class="' . $bc . '__intro grid-container">';
 	$o .= '<div class="grid-x grid-padding-x">';
 	$o .= '<div class="cell large-12 large-offset-1 fade-in-up">';
