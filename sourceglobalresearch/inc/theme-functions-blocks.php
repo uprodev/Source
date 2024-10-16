@@ -4598,3 +4598,83 @@ function number_info($id, $block, $number){
         }
     }
 }
+
+
+/**
+ * Explore Services
+ * @param int $id
+ * @param int $block
+ * @param int $number
+ * @return string
+ */
+function explore_services($id, $block, $number){
+
+    $flexible_content = get_field('flexible_blocks', $id);
+
+    foreach ($flexible_content as $layout) {
+        if ($layout['acf_fc_layout'] === 'explore_services') {
+            $list = $layout['services_list'];
+            $title = $layout['title'];
+            if($list):
+
+                $o = '<section class="service-item-2x">';
+                $o .= '<div class="grid-container">';
+                $o .= '<div class="grid-x grid-padding-x">';
+                $o .= '<div class="cell large-12">';
+                if($title){
+                    $o .= '<h2 class="title">' . $title . '</h2>';
+                }
+                $o .= '<div class="wrap">';
+                foreach($list as $li):
+                    $link = $li["link"];
+                    $image = $li["image"];
+
+                    $o .= '<div class="item">';
+                    if($image) {
+                        $o .= '<figure>';
+                        $o .= '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '">';
+                        $o .= '</figure>';
+                    }
+                    $o .= '<div class="text">';
+
+                    if($li['title']){
+                        $o .= '<h6 class="title-info">'. $li['title'].'</h2>';
+                    }
+                    if($li['text']) {
+                        $o .= '<p>' . $li['text'] . '</p>';
+                    }
+
+                    if( $link ){
+                        $link_url = $link['url'];
+                        $link_title = $link['title'];
+                        $link_target = $link['target'] ? $link['target'] : '_self';
+
+                        $o .= '<div class="whats-new-card__cta"><a class="arrow-link whats-new-card__cta-link" href="'. esc_url($link_url).'" target="' . esc_attr($link_target).'">
+                                <span class="arrow-link__inner">
+                                    <span class="arrow-link__text about-ctas__cta-link-text">'. esc_html($link_title).'</span>
+                                    <span class="arrow-link__arrow about-ctas__cta-link-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 14.728">
+                                            <path id="arrow" class="arrow" d="M177.707 8.071a.999.999 0 0 0 0-1.414L171.343.293a.999.999 0 1 0-1.414 1.414l5.657 5.657-5.657 5.657a.999.999 0 1 0 1.414 1.414l6.364-6.364Z" fill="#fff"></path><path id="line" class="line" d="M0 6.364h177v2H0z" fill="#fill"></path>
+                                        </svg>
+                                    </span>
+                                </span>
+                            </a></div>';
+                    }
+                    $o .= '</div>';
+
+
+                    $o .= '</div>';
+
+                endforeach;
+                $o .= '</div>';
+                $o .= '</div>';
+                $o .= '</div>';
+                $o .= '</div>';
+                $o .= '</section>';
+
+            endif;
+
+            return $o;
+        }
+    }
+}
