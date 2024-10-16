@@ -4531,3 +4531,70 @@ function page_hero($id, $block, $number)
 
     return $o;
 }
+
+
+/**
+ * Number Info
+ * @param int $id
+ * @param int $block
+ * @param int $number
+ * @return string
+ */
+function number_info($id, $block, $number){
+    $color = get_field('page_highlight_colour', get_the_ID());
+    $flexible_content = get_field('flexible_blocks', $id);
+    if($color == 'green'){
+        $style = '';
+    }elseif($color == 'purple'){
+        $style = ' color-violet';
+    }elseif($color == 'blue'){
+        $style = ' color-turquoise';
+    }else{
+        $style = ' color-'.$color;
+    }
+
+    foreach ($flexible_content as $layout) {
+        if ($layout['acf_fc_layout'] === 'number_info') {
+            $list = $layout['number_list'];
+
+            if($list):
+                $i = 1;
+
+                $o = '<section class="number-info' . $style . '">';
+                $o .= '<div class="grid-container">';
+                $o .= '<div class="grid-x grid-padding-x">';
+                $o .= '<div class="cell large-12">';
+                $o .= '<div class="content">';
+                foreach($list as $li):
+                    $title = $li["title"];
+                    $text = $li["text"];
+
+                    $o .= '<div class="item">';
+                    $o .= '<div class="number-wrap">';
+                    $o .= '<p class="number">' . $i . '</p>';
+                    $o .= '</div>';
+                    if($title){
+                        $o .= '<div class="title-wrap">';
+                        $o .= '<h2 class="title">' . $title . '</h2>';
+                        $o .= '</div>';
+                    }
+                    if($text){
+                        $o .= '<div class="text-wrap">';
+                        $o .= wpautop($text);
+                        $o .= '</div>';
+                    }
+                    $o .= '</div>';
+                $i++;
+                endforeach;
+                $o .= '</div>';
+                $o .= '</div>';
+                $o .= '</div>';
+                $o .= '</div>';
+                $o .= '</section>';
+
+            endif;
+
+            return $o;
+        }
+    }
+}
