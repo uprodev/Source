@@ -65,6 +65,7 @@ function latest_posts($id, $block, $number, $flexible_content = true)
 	} else {
 		$title = get_post_meta($id, 'flexible_blocks_' . $block . '_title', true);
 		$use_latest = get_post_meta($id, 'flexible_blocks_' . $block . '_use_latest', true);
+        $use_cta_block = get_post_meta($id, 'flexible_blocks_' . $block . '_use_cta_block', true);
 	}
 	$posts = [];
 	if ($use_latest) {
@@ -94,6 +95,7 @@ function latest_posts($id, $block, $number, $flexible_content = true)
 	$autoplay = false;
 	$autoplay_speed = 5000;
 	$slides = '';
+
 	foreach ($posts as $post_id) {
 		$slides .= '<div class="' . $bc . '__slide' . ($slides_count > 1 ? ' swiper-slide' : '') . '">';
 		$slides .= latest_posts_card($post_id);
@@ -126,7 +128,38 @@ function latest_posts($id, $block, $number, $flexible_content = true)
 	$o .= '</div>'; // $bc__swiper-container
 	$o .= '</div>'; // $bc__swiper-wrap
 	$o .= '</div>'; // .cell
-	$o .= '</div>'; // .grid-padding-x
+
+    if($use_cta_block){
+        $title_cta = get_post_meta($id, 'flexible_blocks_' . $block . '_title_cta', true);
+        $link_cta = get_post_meta($id, 'flexible_blocks_' . $block . '_link_cta', true);
+
+        $o .= '<div class="cell large-12">';
+		$o .= '<div class="content">';
+        $o .= $title_cta ? '<h2 class="title">' . esc_html($title_cta) . '</h2>' : '';
+		if($link_cta) {
+            $link_url = $link_cta['url'];
+            $link_title = $link_cta['title'];
+            $link_target = $link_cta['target'] ? $link_cta['target'] : '_self';
+
+            $o .= '<div class="btn-wrap">';
+            $o .= '<a href="' . esc_url($link_url) . '" target="' . esc_attr($link_target) . '" class="arrow-link subscribe-call-out__cta-link">';
+            $o .= '<span class="arrow-link__inner">';
+            $o .= '<span class="arrow-link__text subscribe-call-out__cta-link-text">' . esc_html($link_title) . '</span>';
+            $o .= '<span class="arrow-link__arrow subscribe-call-out__cta-link-arrow">';
+            $o .= '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 14.728">';
+            $o .= '<path id="arrow" class="arrow" d="M177.707 8.071a.999.999 0 0 0 0-1.414L171.343.293a.999.999 0 1 0-1.414 1.414l5.657 5.657-5.657 5.657a.999.999 0 1 0 1.414 1.414l6.364-6.364Z" fill="#fff"></path>';
+            $o .= '<path id="line" class="line" d="M0 6.364h177v2H0z" fill="#fill"></path>';
+            $o .= '</svg>';
+            $o .= '</span>';
+            $o .= '</span>';
+            $o .= '</a>';
+            $o .= '</div>'; // .btn-wrap
+        }
+		$o .= '</div>'; // .content
+        $o .= '</div>'; // .cell .large-12
+    }
+
+    $o .= '</div>'; // .grid-padding-x
 	$o .= '</div>'; // .grid-container
 	$o .= '</section>';
 	return $o;
@@ -4369,66 +4402,70 @@ function brand_insights_white_space($id, $block, $number)
  * @return string
  */
 function about($id, $block, $number){
-    $bc = 'about';
-    //$list = get_post_meta($id, 'flexible_blocks_' . $block . '_about_items', true);
-    $flexible_content = get_field('flexible_blocks');
+
+    $flexible_content = get_field('flexible_blocks', $id);
+
     foreach ($flexible_content as $layout) {
         if ($layout['acf_fc_layout'] === 'about') {
             $list = $layout['about_items'];
+
+            if($list):
+
+                $o = '<section class="about-ctas about-new">';
+                $o .= '<div class="grid-container">';
+                $o .= '<div class="grid-x grid-padding-x">';
+                $o .= '<div class="cell large-12">';
+                $o .= '<div class="content">';
+                    foreach($list as $li):
+                        $link = $li["link"];
+                        $image = $li["image"];
+
+                        $o .= '<div class="item">';
+                        $o .= '<div class="text">';
+
+                        if($li['title']){
+                            $o .= '<h2 class="title">'. $li['title'].'</h2>';
+                        }
+                        if($li['text']) {
+                            $o .= '<p>' . $li['text'] . '</p>';
+                        }
+
+                        if( $link ){
+                            $link_url = $link['url'];
+                            $link_title = $link['title'];
+                            $link_target = $link['target'] ? $link['target'] : '_self';
+
+                            $o .= '<a class="arrow-link  arrow-link--dark about-ctas__cta-link" href="'. esc_url($link_url).'" target="' . esc_attr($link_target).'">
+                                <span class="arrow-link__inner">
+                                    <span class="arrow-link__text about-ctas__cta-link-text">'. esc_html($link_title).'</span>
+                                    <span class="arrow-link__arrow about-ctas__cta-link-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 14.728">
+                                            <path id="arrow" class="arrow" d="M177.707 8.071a.999.999 0 0 0 0-1.414L171.343.293a.999.999 0 1 0-1.414 1.414l5.657 5.657-5.657 5.657a.999.999 0 1 0 1.414 1.414l6.364-6.364Z" fill="#fff"></path><path id="line" class="line" d="M0 6.364h177v2H0z" fill="#fill"></path>
+                                        </svg>
+                                    </span>
+                                </span>
+                            </a>';
+                        }
+                    $o .= '</div>';
+
+                    if($image) {
+                        $o .= '<figure>';
+                        $o .= '<img src="' . $image['url'] . '" alt="' . $image['alt'] . '">';
+                        $o .= '</figure>';
+                    }
+                    $o .= '</div>';
+
+                    endforeach;
+                $o .= '</div>';
+                $o .= '</div>';
+                $o .= '</div>';
+                $o .= '</div>';
+                $o .= '</section>';
+
+            endif;
+
+    return $o;
         }
     }
-
-    if($list):?>
-
-        <section class="about-ctas about-new">
-            <div class="grid-container">
-                <div class="grid-x grid-padding-x">
-                    <!--fade-in-up-->
-                    <div class="cell large-12">
-                        <div class="content">
-                            <?php foreach($list as $li):
-                                $link = $li['link'];
-                                $image = $li['image'];?>
-                                <div class="item">
-                                    <div class="text">
-                                        <?php if($li['title']):?>
-                                            <h2 class="title"><?= $li['title'];?></h2>
-                                        <?php endif;?>
-                                        <?php if($li['text']):?>
-                                            <p><?= $li['text'];?></p>
-                                        <?php endif;?>
-
-                                        <?php if( $link ):
-                                            $link_url = $link['url'];
-                                            $link_title = $link['title'];
-                                            $link_target = $link['target'] ? $link['target'] : '_self';
-                                            ?>
-                                            <a class="arrow-link  arrow-link--dark about-ctas__cta-link" href="<?= esc_url($link_url); ?>" target="<?= esc_attr($link_target); ?>">
-                                                <span class="arrow-link__inner">
-                                                    <span class="arrow-link__text about-ctas__cta-link-text"><?= esc_html($link_title); ?></span>
-                                                    <span class="arrow-link__arrow about-ctas__cta-link-arrow">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178 14.728">
-                                                            <path id="arrow" class="arrow" d="M177.707 8.071a.999.999 0 0 0 0-1.414L171.343.293a.999.999 0 1 0-1.414 1.414l5.657 5.657-5.657 5.657a.999.999 0 1 0 1.414 1.414l6.364-6.364Z" fill="#fff"></path><path id="line" class="line" d="M0 6.364h177v2H0z" fill="#fill"></path>
-                                                        </svg>
-                                                    </span>
-                                                </span>
-                                            </a>
-                                        <?php endif; ?>
-                                    </div>
-                                    <?php if($image):?>
-                                        <figure>
-                                            <img src="<?= $image['url'];?>" alt="<?= $image['alt'];?>">
-                                        </figure>
-                                    <?php endif;?>
-                                </div>
-                            <?php endforeach;?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-<?php endif;
-
 }
 
