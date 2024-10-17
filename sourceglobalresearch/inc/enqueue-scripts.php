@@ -55,8 +55,6 @@ function site_scripts() {
 	// Main stylesheet
 	wp_enqueue_style( 'styles', get_template_directory_uri() . '/assets/css/style.css' . $cb, [], '', 'all' );
 
-    wp_enqueue_style( 'site', get_template_directory_uri() . '/assets/css/site.css' . $cb, [], '', 'all' );
-
     wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/styles.css' . $cb, [], '', 'all' );
 	// Override stylesheet
 	wp_enqueue_style( 'styles_override', get_template_directory_uri() . '/style.css' . $cb, [], '', 'all' );
