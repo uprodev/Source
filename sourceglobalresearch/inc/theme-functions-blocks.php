@@ -4678,3 +4678,64 @@ function explore_services($id, $block, $number){
         }
     }
 }
+
+/**
+ * We Help
+ * @param int $id
+ * @param int $block
+ * @param int $number
+ * @return string
+ */
+function we_help($id, $block, $number){
+
+    $flexible_content = get_field('flexible_blocks', $id);
+
+    foreach ($flexible_content as $layout) {
+        if ($layout['acf_fc_layout'] === 'we_help') {
+            $list = $layout['help_list'];
+            $title = $layout['title'];
+            if($list):
+
+                $o = '<section class="carts-4x">';
+                $o .= '<div class="grid-container">';
+                $o .= '<div class="grid-x grid-padding-x">';
+                $o .= '<div class="cell large-12">';
+                $o .= '<div class="content">';
+                if($title){
+                    $o .= '<h2 class="title">' . $title . '</h2>';
+                }
+                $o .= '<div class="wrap">';
+                foreach($list as $li):
+                    $icon = $li["icon"];
+
+                    $o .= '<div class="item">';
+                    if($icon) {
+                        $o .= '<figure>';
+                        $o .= '<img src="' . $icon['url'] . '" alt="' . $icon['alt'] . '">';
+                        $o .= '</figure>';
+                    }
+                    $o .= '<div class="text">';
+
+                    if($li['title']){
+                        $o .= '<h6>'. $li['title'].'</h2>';
+                    }
+                    if($li['text']) {
+                        $o .= '<p>' . $li['text'] . '</p>';
+                    }
+                    $o .= '</div>';
+                    $o .= '</div>';
+
+                endforeach;
+                $o .= '</div>';
+                $o .= '</div>';
+                $o .= '</div>';
+                $o .= '</div>';
+                $o .= '</div>';
+                $o .= '</section>';
+
+            endif;
+
+            return $o;
+        }
+    }
+}
