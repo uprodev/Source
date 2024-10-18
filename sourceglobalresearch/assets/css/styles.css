@@ -196,7 +196,7 @@
   padding: 0; }
 
 .service-item-2x {
-  padding: 117px 0 100px;
+  padding: 90px 0 100px;
   background: #fff;
   color: #000; }
 .service-item-2x .cell.large-12 {
@@ -211,7 +211,7 @@
   font-size: 48px;
   font-weight: 500;
   line-height: 72px;
-  margin: 0 0 70px; }
+  margin: 0 0 50px; }
 .service-item-2x .wrap {
   display: -webkit-box;
   display: -ms-flexbox;
